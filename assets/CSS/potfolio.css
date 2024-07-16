@@ -2,15 +2,15 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  body {
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #FFC75E;
     padding: 20px;
-  }
-  
-  header {
+}
+
+header {
     background-color: #333;
     color: white;
     padding: 1em 0;
@@ -20,39 +20,39 @@
     z-index: 1000;
     text-align: center;
     margin-bottom: 20px;
-  }
-  
-  header h1.special-font {
+}
+
+header h1.special-font {
     font-family: "Roboto Slab", serif;
-  }
-  
-  nav {
+}
+
+nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-  }
-  
-  nav ul {
+}
+
+nav ul {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
     margin-right: auto;
     animation: slideIn 1s ease-out;
-  }
-  
-  nav ul li {
+}
+
+nav ul li {
     margin: 0 15px;
-  }
-  
-  nav ul li a {
+}
+
+nav ul li a {
     color: white;
     text-decoration: none;
     font-weight: bold;
     position: relative;
-  }
-  
-  nav ul li a::before {
+}
+
+nav ul li a::before {
     content: "";
     position: absolute;
     width: 0;
@@ -62,14 +62,14 @@
     background-color: #FFC75E;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
-  }
-  
-  nav ul li a:hover::before {
+}
+
+nav ul li a:hover::before {
     visibility: visible;
     width: 100%;
-  }
-  
-  .btn-download {
+}
+
+.btn-download {
     background-color: #FFC75E;
     color: white;
     padding: 10px 20px;
@@ -78,178 +78,181 @@
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: auto;
-    margin-right: 20px;
-  }
-  
-  .btn-download:hover {
-    background-color: #FFC75E;
-  }
-  
-  .social-links {
+}
+
+.btn-download:hover {
+    background-color: #ffab00; /* Changed hover color for contrast */
+}
+
+.social-links {
     margin-top: 30px;
     display: flex; 
     justify-content: center; 
     align-items: center;
-  }
-  
-  .social-links ul {
+}
+
+.social-links ul {
     list-style: none;
     padding: 0;
     display: flex;
     justify-content: center;
     gap: 25px;
-  }
-  
-  .social-links ul li {
+}
+
+.social-links ul li {
     display: inline;
-  }
-  
-  .social-links ul li a {
+}
+
+.social-links ul li a {
     color: #FFC75E;
     font-size: 30px;
     transition: color 0.3s ease;
-  }
-  
-  .social-links ul li a:hover {
+}
+
+.social-links ul li a:hover {
     color: #ffffff;
-  }
-  
-  h1 {
+}
+
+h1 {
     margin-top: 20px;
-  }
-  
-  p {
+}
+
+p {
     font-size: 20px;
     margin-top: 20px;
-  }
-  
-  .container {
+}
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.1882352941);
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container .item {
+}
+
+.container .item {
     display: flex;
     gap: 20px;
-  }
-  
-  .container .item .hotel-content {
+}
+
+.container .item .hotel-content {
     flex: 1;
-  }
-  
-  .container .item .hotel-image {
+}
+
+.container .item .hotel-image {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-  }
-  
-  .container .item .hotel-image img {
+}
+
+.container .item .hotel-image img {
     max-width: 100%;
     border-radius: 10px;
-  }
-  
-  footer {
+}
+
+footer {
     text-align: center;
     margin-top: 20px;
-  }
-  
-  /* Stili del menu Hamburger */
-  .hamburger {
+}
+
+/* Hamburger menu styles */
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-  }
-  
-  .bar {
+}
+
+.bar {
     height: 3px;
     width: 25px;
     background-color: white;
     margin: 3px 0;
     transition: 0.3s;
-  }
-  
-  /* Media Queries */
-  @media screen and (max-width: 1200px) {
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
     body {
-      padding: 15px;
+        padding: 15px;
     }
-  
+
     .container .item .hotel-image img {
-      border-radius: 8px;
+        border-radius: 8px;
     }
-  
+
     .container {
-      gap: 15px;
-      padding: 15px;
+        gap: 15px;
+        padding: 15px;
     }
-  }
-  
-  @media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 992px) {
     body {
-      padding: 10px;
+        padding: 10px;
     }
-  
+
     p {
-      font-size: 18px;
+        font-size: 18px;
     }
-  
+
     .container {
-      gap: 10px;
-      padding: 10px;
+        gap: 10px;
+        padding: 10px;
     }
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
     body {
-      padding: 5px;
+        padding: 5px;
     }
-  
+
     p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  
+
     .container {
-      gap: 5px;
-      padding: 5px;
+        gap: 5px;
+        padding: 5px;
     }
-  
+
     nav ul {
-      display: none; 
-      flex-direction: column;
-      width: 100%;
-      background-color: #333; 
-      position: absolute;
-      top: 60px; 
-      left: 0;
-      z-index: 1000;
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #333; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        z-index: 1000;
     }
-  
+
     nav ul.active {
-      display: flex;
+        display: flex;
     }
-  
+
     .hamburger {
-      display: flex; 
-      margin-left: auto; 
+        display: flex; 
+        margin-left: auto; 
     }
-  
+
     nav {
-      justify-content: space-between; /* Distribuzione dello spazio */
+        justify-content: space-between; /* Distribute space */
     }
-  
+
     nav ul li {
-      margin: 0; /* Rimuovi i margini */
+        margin: 10px 0; /* Adjust margins */
     }
-  }
-  
-  @media screen and (max-width: 576px) {
+}
+
+@media screen and (max-width: 576px) {
     p {
-      font-size: 14px;
+        font-size: 14px;
     }
-  }  
+
+    .social-links ul li a {
+        font-size: 24px; /* Smaller icons on small screens */
+    }
+}

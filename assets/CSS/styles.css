@@ -67,6 +67,7 @@ nav ul li a:hover::before {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: 20px;
+    margin-right: 20px;
 }
 
 .btn-download:hover {
