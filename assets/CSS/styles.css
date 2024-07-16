@@ -17,7 +17,7 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -26,7 +26,7 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    margin-right: auto; /* Aggiunto per spostare il pulsante a destra */
+    margin-right: auto;
     animation: slideIn 1s ease-out;
 }
 
@@ -66,7 +66,7 @@ nav ul li a:hover::before {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s ease;
-    margin-left: auto; /* Aggiunto per spostare il pulsante a destra */
+    margin-left: 20px;
     margin-right: 20px;
 }
 
@@ -93,7 +93,6 @@ nav ul li a:hover::before {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -111,25 +110,25 @@ main {
 }
 
 h1 {
-    font-family: 'Arial', sans-serif; /* Cambia con il font desiderato */
-    font-size: 2.5em; /* Grandezza dell'h1 */
-    color: #000000; /* Colore dell'h1 */
-    margin: 20px 0; /* Margine per distanziare */
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #000000;
+    margin: 20px 0;
 }
 
 h2 {
-    font-family: 'Arial', sans-serif; /* Cambia con il font desiderato */
-    font-size: 2em; /* Grandezza dell'h2 */
-    color: #000000; /* Colore dell'h2 */
-    margin: 15px 0; /* Margine per distanziare */
+    font-family: 'Arial', sans-serif;
+    font-size: 2em;
+    color: #000000;
+    margin: 15px 0;
 }
 
 p {
-    font-family: 'Arial', sans-serif; /* Cambia con il font desiderato */
-    font-size: 1.5em; /* Grandezza del paragrafo */
-    color: #000000; /* Colore del testo del paragrafo */
-    line-height: 1.5; /* Altezza della linea per leggibilità */
-    margin: 10px 0; /* Margine per distanziare */
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5em;
+    color: #000000;
+    line-height: 1.5;
+    margin: 10px 0;
 }
 
 .images {
@@ -166,6 +165,7 @@ p {
 
 .skills-container {
     display: flex;
+    flex-wrap: wrap; /* Permette il wrapping su più righe */
     justify-content: center;
     overflow: hidden;
     position: relative;
@@ -173,8 +173,8 @@ p {
 }
 
 .skill-item {
-    min-width: 200px;
-    margin: 0 15px;
+    min-width: 150px; /* Ridotto per adattarsi meglio su schermi piccoli */
+    margin: 10px; /* Margine per distanziare gli elementi */
 }
 
 .skill-item img {
@@ -189,26 +189,12 @@ p {
     transform: scale(1.1);
 }
 
-/* Animazione di scorrimento */
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(calc(-200px * 5)); 
-    }
-}
-
-.skills-container {
-    animation: scroll 10s linear infinite;
-}
-
 .social {
     padding: 50px 0;
     text-align: center;
     background-color: #33333300;
     color: rgb(100, 95, 95);
-    margin-bottom: 40px; /* Aggiunto margine inferiore per maggiore spazio */
+    margin-bottom: 40px;
 }
 
 .social h2 {
@@ -220,7 +206,8 @@ p {
 .social-container {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    gap: 20px; /* Spazio tra le icone social */
+    flex-wrap: wrap; /* Permette il wrapping su più righe */
 }
 
 .social-icon {
@@ -234,7 +221,6 @@ p {
     width: 100%;
     height: auto;
     border-radius: 50%;
-    background-color:#33333300
 }
 
 .social-icon:hover {
@@ -252,26 +238,36 @@ footer {
     bottom: 0;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
 @media (max-width: 768px) {
     nav ul {
+        display: none; /* Nasconde il menu */
         flex-direction: column;
-        margin-right: 0;
+        width: 100%;
+        position: absolute;
+        top: 60px; /* Posizione sotto il header */
+        left: 0;
+        background-color: #333;
     }
 
-    nav ul li {
-        margin: 10px 0;
+    nav.active ul {
+        display: flex; /* Mostra il menu quando attivo */
     }
 
-    .btn-download {
-        margin-top: 10px;
-    }
-
-    .skills-container {
-        flex-direction: column;
-    }
-
-    .skill-item {
-        margin: 15px 0;
+    .menu-toggle {
+        display: flex; /* Mostra il bottone per il menu a hamburger */
     }
 }
 
@@ -292,7 +288,7 @@ footer {
     }
 
     .social-container {
-        flex-direction: column;
+        flex-direction: row; /* Mantiene l'orientamento orizzontale */
         gap: 10px;
     }
 }
