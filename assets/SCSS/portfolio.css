@@ -9,6 +9,21 @@ body {
   background-color: #FFC75E;
   padding: 20px;
 }
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+}
 
 header {
   background-color: #333;
@@ -18,6 +33,11 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+header h1.special-font {
+  font-family: "Roboto Slab", serif;
 }
 
 nav {
@@ -25,7 +45,6 @@ nav {
   justify-content: center;
   align-items: center;
 }
-
 nav ul {
   list-style: none;
   margin: 0;
@@ -34,18 +53,15 @@ nav ul {
   margin-right: auto;
   animation: slideIn 1s ease-out;
 }
-
 nav ul li {
   margin: 0 15px;
 }
-
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
   position: relative;
 }
-
 nav ul li a::before {
   content: "";
   position: absolute;
@@ -57,7 +73,6 @@ nav ul li a::before {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
-
 nav ul li a:hover::before {
   visibility: visible;
   width: 100%;
@@ -71,19 +86,11 @@ nav ul li a:hover::before {
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-  margin-left: auto; /* Aggiunto per spostare il pulsante a destra */
+  margin-left: auto;
+  margin-right: 20px;
 }
-
 .btn-download:hover {
   background-color: #FFC75E;
-}
-
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-header h1.special-font {
-  font-family: "Roboto Slab", serif;
 }
 
 .social-links {
@@ -100,7 +107,7 @@ header h1.special-font {
   display: inline;
 }
 .social-links ul li a {
-  color: #333;
+  color: #FFC75E;
   font-size: 30px;
   transition: color 0.3s ease;
 }
@@ -115,6 +122,21 @@ h1 {
 p {
   font-size: 20px;
   margin-top: 20px;
+}
+@media screen and (max-width: 992px) {
+  p {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 768px) {
+  p {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 14px;
+  }
 }
 
 .container {
@@ -143,60 +165,31 @@ p {
   max-width: 100%;
   border-radius: 10px;
 }
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
 @media screen and (max-width: 1200px) {
-  body {
-    padding: 15px;
+  .container .item .hotel-image img {
+    border-radius: 8px;
   }
+}
+@media screen and (max-width: 1200px) {
   .container {
     gap: 15px;
     padding: 15px;
   }
-  .container .hotel-image img {
-    border-radius: 8px;
-  }
 }
 @media screen and (max-width: 992px) {
-  body {
-    padding: 10px;
-  }
   .container {
     gap: 10px;
     padding: 10px;
   }
-  p {
-    font-size: 18px;
-  }
 }
 @media screen and (max-width: 768px) {
-  .item {
-    flex-direction: column;
-  }
-  body {
-    padding: 5px;
-  }
   .container {
     gap: 5px;
     padding: 5px;
   }
-  p {
-    font-size: 16px;
-  }
 }
-@media screen and (max-width: 576px) {
-  .social-links ul {
-    flex-direction: column;
-    gap: 15px;
-  }
-  .social-links ul a {
-    font-size: 25px;
-  }
-  p {
-    font-size: 14px;
-  }
+
+footer {
+  text-align: center;
+  margin-top: 20px;
 }

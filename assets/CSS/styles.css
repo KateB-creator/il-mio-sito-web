@@ -67,6 +67,7 @@ nav ul li a:hover::before {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: auto; /* Aggiunto per spostare il pulsante a destra */
+    margin-right: 20px;
 }
 
 .btn-download:hover {
