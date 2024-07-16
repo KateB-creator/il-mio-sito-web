@@ -10,7 +10,12 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">I miei progetti</a></li>
                 <li><a href="contact.html">Contatti</a></li>
@@ -18,21 +23,30 @@
             <a href="assets/files/Balia Katiuscia-junior full stack developer.pdf" class="btn-download" download>Scarica CV</a>
         </nav>
     </header>
-<main>
-    <section id="contact">
-        <h1>Inviami un messaggio</h1>
-        <form id="contact-form">
-            <label for="name">Nome:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Messaggio:</label>
-            <textarea id="message" name="message" required></textarea>
-            <button type="submit">Invia</button>
-        </form>
-    </section>
-</main>
-<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-<script src="assets/JS/contact.js"></script>
+    <main>
+        <section id="contact">
+            <h1>Inviami un messaggio</h1>
+            <form id="contact-form">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="message">Messaggio:</label>
+                <textarea id="message" name="message" required></textarea>
+                <button type="submit">Invia</button>
+            </form>
+        </section>
+    </main>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="assets/JS/contact.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

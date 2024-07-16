@@ -12,7 +12,12 @@
 <body>
     <header>
         <nav>
-            <ul>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">I miei progetti</a></li>
                 <li><a href="contact.html">Contatti</a></li>
@@ -32,13 +37,8 @@
         <div class="item">
             <div class="hotel-content">
                 <h2>Progetto Start2impact - Travel</h2>
-                <p>Mi sono occupata della progettazione e della stesura della pagina iniziale del sito web dell'Hotel Pomelia. 
-                    Il progetto ha incluso la definizione della vision e mission dell'hotel, la descrizione della sua storia e dei valori familiari, e la presentazione delle innovazioni ecologiche introdotte.
-                    Ho evidenziato l'uso di energia rinnovabile, l'arredamento sostenibile e i servizi offerti, tra cui la ristorazione a km 0 e le attività organizzate per gli ospiti. 
-                    Ho inoltre sottolineato l'impegno dell'hotel nel turismo sostenibile e il suo status di prima Società Benefit in Sicilia.</p>
-                   <p> Nel progetto per l'Hotel Pomelia, mi sono occupata della creazione del logo e dello sfondo del sito web, realizzati attraverso Canva con un design ideato personalmente. 
-                    Il logo riflette l'essenza dell'hotel come ecostruttura e punto di riferimento per il turismo sostenibile in Sicilia, mentre lo sfondo è stato pensato per armonizzarsi con l'atmosfera naturale e accogliente della struttura. 
-                    Questi elementi visivi sono stati progettati per rappresentare fedelmente la missione e i valori dell'Hotel Pomelia.</p>
+                <p>Mi sono occupata della progettazione e della stesura della pagina iniziale del sito web dell'Hotel Pomelia...</p>
+                <p>Nel progetto per l'Hotel Pomelia, mi sono occupata della creazione del logo e dello sfondo del sito web...</p>
             </div>
             <div class="hotel-image">
                 <img src="assets/img/hotelpomelia.jpg" alt="pagina sito web">
@@ -48,5 +48,14 @@
     <footer>
         <p>&copy; 2024 Portfolio di Balia Katiuscia. Tutti i diritti riservati.</p>
     </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
