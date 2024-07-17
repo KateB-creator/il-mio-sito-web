@@ -66,34 +66,62 @@ nav ul li a:hover::before {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 30px;
 }
 
 .btn-download:hover {
     background-color: #FFC75E;
 }
 
+
+body {
+    font-family: 'Lora', serif; /* Font per il corpo */
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 50px; /* Distanza dall'header */
+}
+
 .hero-image {
-    text-align: center;
-    margin: 20px 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 }
 
-.centered-image {
-    max-width: 70%; /* Limita la larghezza */
-    height: auto;    /* Mantiene le proporzioni */
-    margin-top: 60px;
+.left-image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
 }
 
-@keyframes slideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.hero-description {
+    flex: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-width: 800px; /* Imposta la larghezza massima */
 }
+
+.hero-description h1 {
+    font-family: 'Playfair Display', serif; /* Font per il titolo */
+    font-size: 2.5em; /* Dimensione del titolo */
+    margin-bottom: 10px;
+}
+
+.hero-description p {
+    font-family: 'Lora', serif; /* Font per il paragrafo */
+    font-size: 1.2em; /* Dimensione del font */
+    font-size: 1.2em; /* Modifica questa dimensione */
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 100%; /* Limita la larghezza del paragrafo */
+}
+
 
 main {
     padding: 20px;
@@ -295,6 +323,7 @@ footer {
 }
 
 @media (max-width: 768px) {
+    
     nav ul {
         display: none; /* Nasconde il menù */
         flex-direction: column; /* Disposizione a colonna */
@@ -318,8 +347,20 @@ footer {
     nav ul li {
         padding: 10px; /* Padding per migliorare il clic */
         text-align: left; /* Allineamento a sinistra */
-    }    
+    }   
+    
+    .hero-container {
+        flex-direction: column; /* Cambia la direzione in colonna */
+        align-items: center; /* Allinea al centro */
+    }
+
+    .hero-description {
+        padding-left: 0; /* Rimuovi padding a sinistra */
+        text-align: center; /* Allinea il testo al centro */
+    }
 }
+}
+
 
 @media (max-width: 480px) {
     .profile-image {
