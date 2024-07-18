@@ -1,6 +1,9 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffc75ea0;
+    background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
+    background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
+    background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
+    background-position: center; /* Centra l'immagine */
     margin: 0;
     padding: 0;
 }
@@ -216,57 +219,67 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
-    margin-top: 20px;
+    margin-top: 60px;
 }
 
-.hobby-item {
-    position: relative;
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+.square-image {
+    height: 300px; /* Altezza quadrata desiderata */
+    width: auto; /* Lascia che la larghezza si adatti proporzionalmente */
+    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
 }
 
-.hobby-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s;
+.carousel-item {
+    text-align: center; /* Centra le immagini nel carousel */
+    overflow: hidden; /* Nasconde overflow per evitare distorsioni */
+    max-width: 600px; /* Larghezza massima del carousel */
+    margin: 0 auto; /* Centra il carousel */
 }
 
-.hobby-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.hobby-item:hover img {
-    transform: scale(1.1);
-}
-
-.hobby-item p {
-    margin-top: 10px;
-    font-size: 14px;
-    color: #333;
+.carousel-caption {
+    position: absolute; /* Posiziona la caption sopra l'immagine */
+    bottom: 0; /* Allinea la caption in basso */
+    left: 0; /* Allinea la caption a sinistra */
+    width: 100%; /* Occupa l'intera larghezza dell'immagine */
     padding: 10px;
+    background-color: rgba(237, 233, 209, 0.285); /* Sfondo semitrasparente per migliorare la leggibilità */
+    color: rgb(11, 11, 1);
+    text-align: center; /* Allinea il testo al centro */
+}
+
+.carousel-inner {
+    height: 300px; /* Altezza quadrata del carousel */
+    max-width: 600px; /* Larghezza massima del carousel */
+    margin: 0 auto; /* Centra il carousel orizzontalmente */
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: auto; /* Larghezza dei controlli */
+    padding: 0 10px; /* Padding per i controlli */
+    top: calc(50% - 15px); /* Posizionamento verticale dei controlli */
+    height: 30px; /* Altezza dei controlli */
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 30px; /* Dimensione icona precedente/successiva */
+    height: 30px; /* Dimensione icona precedente/successiva */
 }
 
 .follow-us {
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
 }
 
 .social-links {
     display: flex;
     justify-content: center; /* Centra le icone */
-    gap: 20px; /* Spazio tra le icone */
+    gap: 30px; /* Spazio tra le icone */
+    margin-bottom: 80px; 
 }
 
 .social-icon {
     width: 50px; /* Dimensione dell'icona */
     height: 50px; /* Dimensione dell'icona */
     transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Transizioni per effetti */
-    margin-top: 50px;
 }
 
 .social-icon:hover {
@@ -276,13 +289,18 @@ p {
 }
 
 footer {
-    background-color: #FFC75E;
-    color: #ffffff;
+    background-color: #333 !important;
+    color: #fff !important;
     text-align: center;
-    padding: 1em 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
+    padding: 1rem 0;
+    position: fixed; /* Fisso in fondo alla pagina */
+    bottom: 0; /* Posizionato in fondo */
+    left: 0; /* Allinea a sinistra */
+    width: 100%; /* Larghezza al 100% */
+}
+
+footer, footer * {
+    color: #fff !important;
 }
 
 .menu-toggle {
@@ -333,6 +351,13 @@ footer {
     .hero-description {
         padding-left: 0; /* Rimuovi padding a sinistra */
         text-align: center; /* Allinea il testo al centro */
+    }
+    .square-image {
+        height: 200px; /* Riduci l'altezza per dispositivi più piccoli */
+    }
+
+    .carousel-inner {
+        height: 200px; /* Altezza quadrata per dispositivi più piccoli */
     }
 }
 
