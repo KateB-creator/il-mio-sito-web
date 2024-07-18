@@ -93,7 +93,7 @@ nav ul li a:hover::before {
 }
 
 .left-image {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -209,6 +209,10 @@ p {
     margin: 40px 0;
 }
 
+p {
+    margin-bottom: 60px;
+}
+
 .hobbies-container {
     display: flex;
     justify-content: center;
@@ -219,7 +223,7 @@ p {
 
 .square-image {
     height: 300px; /* Altezza quadrata desiderata */
-    width: 500%; /* Larghezza al 100% del contenitore */
+    width: 100%; /* Larghezza al 100% del contenitore */
     object-fit: contain; /* Mantiene le proporzioni dell'immagine senza tagliare */
 }
 
@@ -232,7 +236,8 @@ p {
 
 
 .carousel-inner {
-    height: 300px; /* Altezza quadrata del carousel */
+    margin-top: 40px;
+    height: 350px; /* Altezza quadrata del carousel */
     max-width: 600px; /* Larghezza massima del carousel */
     margin: 0 auto; /* Centra il carousel orizzontalmente */
 }

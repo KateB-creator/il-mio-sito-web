@@ -81,13 +81,13 @@ nav ul li a:hover::before {
 }
 
 .btn-download:hover {
-    background-color: #ffab00; /
+    background-color: #ffab00; /* Contrast for hover */
 }
 
 main {
     padding: 2rem;
-    margin-top: 100px; 
-    margin-bottom: 80px; 
+    margin-top: 100px; /* Distanza dal header */
+    margin-bottom: 80px; /* Spazio per il footer */
     flex: 1;
     max-width: 800px;
     margin: auto;
@@ -130,26 +130,26 @@ main {
 .social-container {
     display: flex;
     justify-content: center;
-    gap: 50px; 
-    margin-top: 40px; 
-    margin-bottom: 80px; 
+    gap: 50px; /* Spazio tra le icone social */
+    margin-top: 40px; /* Distanza dalla sezione contatti */
+    margin-bottom: 80px; /* Spazio tra le icone e il footer */
 }
 
 .social-icon {
     display: inline-block;
-    width: 50px; 
-    height: 50px; 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    width: 50px; /* Dimensione icone */
+    height: 50px; /* Dimensione icone */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per gli effetti */
 }
 
 .social-icon img {
     width: 100%;
-    height: 100%; 
+    height: 100%; /* Rende l'immagine quadrata */
 }
 
 .social-icon:hover {
-    transform: scale(1.2); 
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
+    transform: scale(1.2); /* Effetto di ingrandimento al passaggio del mouse */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Ombra al passaggio del mouse */
 }
 
 footer {
@@ -157,17 +157,17 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; 
-    bottom: 0;
-    left: 0; 
-    width: 100%; 
+    position: fixed; /* Fisso in fondo alla pagina */
+    bottom: 0; /* Posizionato in fondo */
+    left: 0; /* Allinea a sinistra */
+    width: 100%; /* Larghezza al 100% */
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px;
+    padding: 10px; /* Aggiungi padding per aumentare l'area cliccabile */
 }
 
 .bar {
@@ -187,7 +187,7 @@ footer {
     main {
         padding: 0.5rem;
         max-width: 100%;
-        margin-top: 60px; 
+        margin-top: 60px; /* Regola margine */
     }
 
     header, footer {
@@ -195,28 +195,29 @@ footer {
     }
 
     nav ul {
-        display: none; 
-        flex-direction: column; 
+        display: none; /* Nasconde il menù */
+        flex-direction: column; /* Disposizione a colonna */
         width: 100%;
         background-color: #333;
         position: absolute;
-        top: 60px; 
+        top: 60px; /* Posizione sotto l'header */
         left: 0;
         z-index: 1000;
     }
 
     nav ul.active {
-        display: flex; 
+        display: flex; /* Mostra il menù quando attivo */
     }
 
     .hamburger {
         display: flex;
-        margin-left: 20px; 
+        margin-left: 20px; /* Distanza dal bordo sinistro */
     }
 
     nav ul li {
-        padding: 10px; 
-        text-align: left; 
+        padding: 10px; /* Padding per migliorare il clic */
+        text-align: left; /* Allineamento a sinistra */
+    }
 }
 
 @media (max-width: 600px) {
@@ -231,13 +232,13 @@ footer {
     }
 
     .btn-download {
-        padding: 10px 15px; 
-        margin-right: 10px; 
+        padding: 10px 15px; /* Riduci padding per schermi piccoli */
+        margin-right: 10px; /* Riduci il margine */
     }
 
     .social-icon {
-        width: 40px; 
-        height: 40px; 
+        width: 40px; /* Riduci dimensione icone */
+        height: 40px; /* Riduci dimensione icone */
     }
 }
 
@@ -251,30 +252,30 @@ footer {
     }
 
     nav ul li {
-        padding: 8px; 
-        margin: 0.3rem 0; 
+        padding: 8px; /* Riduci padding */
+        margin: 0.3rem 0; /* Riduci margine */
     }
 
     main {
         padding: 0.5rem;
-        margin-top: 50px; 
-        margin-bottom: 50px; 
+        margin-top: 50px; /* Riduci margine */
+        margin-bottom: 50px; /* Riduci margine */
     }
 
     .btn-download {
-        padding: 8px 10px; 
-        margin-right: 5px; 
+        padding: 8px 10px; /* Riduci padding */
+        margin-right: 5px; /* Riduci il margine */
     }
 
     .social-icon {
-        width: 35px; 
-        height: 35px; 
+        width: 35px; /* Riduci dimensione icone */
+        height: 35px; /* Riduci dimensione icone */
     }
 
     #contact form label, 
     #contact form input, 
     #contact form textarea, 
     #contact form button {
-        font-size: 0.9rem; 
+        font-size: 0.9rem; /* Riduci dimensione testo form */
     }
 }
