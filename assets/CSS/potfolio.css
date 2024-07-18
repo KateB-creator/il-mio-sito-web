@@ -189,6 +189,16 @@ footer {
         padding: 5px;
     }
 
+    .container .item {
+        flex-direction: column;
+    }
+
+    .container .item .hotel-image {
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px; /* Aggiunge uno spazio tra il testo e l'immagine */
+    }
+
     nav ul {
         display: none; /* Nasconde il menù */
         flex-direction: column; /* Disposizione a colonna */

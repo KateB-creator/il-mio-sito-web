@@ -27,14 +27,16 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
     animation: slideIn 1s ease-out;
 }
 
@@ -79,19 +81,20 @@ nav ul li a:hover::before {
 }
 
 .btn-download:hover {
-    background-color: #ffab00; /* Contrast for hover */
+    background-color: #ffab00; /
 }
 
 main {
     padding: 2rem;
-    margin-top: 100px; /* Distanza dal header */
-    margin-bottom: 80px; /* Spazio per il footer */
+    margin-top: 100px; 
+    margin-bottom: 80px; 
     flex: 1;
     max-width: 800px;
     margin: auto;
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(2, 9, 48, 0.989);
 }
+
 #contact form {
     display: flex;
     flex-direction: column;
@@ -127,26 +130,26 @@ main {
 .social-container {
     display: flex;
     justify-content: center;
-    gap: 50px; /* Spazio tra le icone social */
-    margin-top: 40px; /* Distanza dalla sezione contatti */
-    margin-bottom: 80px; /* Spazio tra le icone e il footer */
+    gap: 50px; 
+    margin-top: 40px; 
+    margin-bottom: 80px; 
 }
 
 .social-icon {
     display: inline-block;
-    width: 50px; /* Dimensione icone */
-    height: 50px; /* Dimensione icone */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transizione per gli effetti */
+    width: 50px; 
+    height: 50px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .social-icon img {
     width: 100%;
-    height: 100%; /* Rende l'immagine quadrata */
+    height: 100%; 
 }
 
 .social-icon:hover {
-    transform: scale(2.1); /* Effetto di ingrandimento al passaggio del mouse */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); /* Ombra al passaggio del mouse */
+    transform: scale(1.2); 
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6); 
 }
 
 footer {
@@ -154,16 +157,17 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; /* Fisso in fondo alla pagina */
-    bottom: 0; /* Posizionato in fondo */
-    left: 0; /* Allinea a sinistra */
-    width: 100%; /* Larghezza al 100% */
+    position: fixed; 
+    bottom: 0;
+    left: 0; 
+    width: 100%; 
 }
 
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 10px;
 }
 
 .bar {
@@ -175,28 +179,6 @@ footer {
 }
 
 /* Media Queries */
-@media (max-width: 1200px) {
-    body {
-        padding: 60px 20px;
-    }
-
-    main {
-        padding: 1.5rem;
-        max-width: 90%;
-    }
-}
-
-@media (max-width: 992px) {
-    body {
-        padding: 40px 10px;
-    }
-
-    main {
-        padding: 1rem;
-        max-width: 95%;
-    }
-}
-
 @media (max-width: 768px) {
     body {
         padding: 20px 10px;
@@ -205,7 +187,7 @@ footer {
     main {
         padding: 0.5rem;
         max-width: 100%;
-        margin-top: 60px; /* Regola margine */
+        margin-top: 60px; 
     }
 
     header, footer {
@@ -213,29 +195,28 @@ footer {
     }
 
     nav ul {
-        display: none; /* Nasconde il menù */
-        flex-direction: column; /* Disposizione a colonna */
+        display: none; 
+        flex-direction: column; 
         width: 100%;
         background-color: #333;
         position: absolute;
-        top: 60px; /* Posizione sotto l'header */
+        top: 60px; 
         left: 0;
         z-index: 1000;
     }
 
     nav ul.active {
-        display: flex; /* Mostra il menù quando attivo */
+        display: flex; 
     }
 
     .hamburger {
         display: flex;
-        margin-left: 20px; /* Distanza dal bordo sinistro */
+        margin-left: 20px; 
     }
 
     nav ul li {
-        padding: 10px; /* Padding per migliorare il clic */
-        text-align: left; /* Allineamento a sinistra */
-    }
+        padding: 10px; 
+        text-align: left; 
 }
 
 @media (max-width: 600px) {
@@ -247,5 +228,53 @@ footer {
     main {
         padding: 1rem;
         max-width: 100%;
+    }
+
+    .btn-download {
+        padding: 10px 15px; 
+        margin-right: 10px; 
+    }
+
+    .social-icon {
+        width: 40px; 
+        height: 40px; 
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px 5px;
+    }
+
+    header, footer {
+        padding: 0.5rem 0.2rem;
+    }
+
+    nav ul li {
+        padding: 8px; 
+        margin: 0.3rem 0; 
+    }
+
+    main {
+        padding: 0.5rem;
+        margin-top: 50px; 
+        margin-bottom: 50px; 
+    }
+
+    .btn-download {
+        padding: 8px 10px; 
+        margin-right: 5px; 
+    }
+
+    .social-icon {
+        width: 35px; 
+        height: 35px; 
+    }
+
+    #contact form label, 
+    #contact form input, 
+    #contact form textarea, 
+    #contact form button {
+        font-size: 0.9rem; 
     }
 }

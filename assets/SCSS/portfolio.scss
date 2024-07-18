@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("../img/sfondo_portfolio.png"); // Specifica il percorso dell'immagine
+    background-size: cover; // Assicura che l'immagine copra l'intera area del body
+    background-repeat: no-repeat; // Evita che l'immagine venga ripetuta
+    background-position: center; // Centra l'immagine
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        list-style: none;
+        display: flex;
+        margin-right: auto;
+        animation: slideIn 1s ease-out;
+
+        li {
+            margin: 0 15px;
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-weight: bold;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 0;
+                    height: 2px;
+                    bottom: -5px;
+                    left: 0;
+                    background-color: #FFC75E;
+                    visibility: hidden;
+                    transition: all 0.3s ease-in-out;
+                }
+
+                &:hover::before {
+                    visibility: visible;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.btn-download {
+    background-color: #FFC75E;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-left: auto;
+    margin-right: 20px;
+
+    &:hover {
+        background-color: #ffab00; // Changed hover color for contrast
+    }
+}
+
+main {
+    h1.special-font {
+        font-family: "Roboto Slab", serif;
+        margin-top: 100px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+}
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+    .item {
+        display: flex;
+        gap: 20px;
+
+        .hotel-content {
+            flex: 1;
+        }
+
+        .hotel-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+// Hamburger menu styles
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+
+    .bar {
+        height: 3px;
+        width: 25px;
+        background-color: white;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+}
+
+// Media Queries
+@media screen and (max-width: 1200px) {
+    body {
+        padding: 15px;
+    }
+
+    .container .item .hotel-image img {
+        border-radius: 8px;
+    }
+
+    .container {
+        gap: 15px;
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    body {
+        padding: 10px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        padding: 5px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .container {
+        gap: 5px;
+        padding: 5px;
+    }
+
+    .container .item {
+        flex-direction: column;
+
+        .hotel-image {
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; // Aggiunge uno spazio tra il testo e l'immagine
+        }
+    }
+
+    nav {
+        ul {
+            display: none; // Nasconde il menù
+            flex-direction: column; // Disposizione a colonna
+            width: 100%;
+            background-color: #333;
+            position: absolute;
+            top: 60px; // Posizione sotto l'header
+            left: 0;
+            z-index: 1000;
+
+            &.active {
+                display: flex; // Mostra il menù quando attivo
+            }
+
+            li {
+                padding: 10px; // Padding per migliorare il clic
+                text-align: left; // Allineamento a sinistra
+            }
+        }
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 20px; // Distanza dal bordo sinistro
+    }
+}
+
+@media screen and (max-width: 576px) {
+    p {
+        font-size: 14px;
+    }
+}

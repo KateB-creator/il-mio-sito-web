@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lora', serif;;
     background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
     background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
     background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
@@ -74,11 +74,6 @@ nav ul li a:hover::before {
 
 .btn-download:hover {
     background-color: #FFC75E;
-}
-
-
-body {
-    font-family: 'Lora', serif; /* Font per il corpo */
 }
 
 .hero-container {
@@ -224,27 +219,17 @@ p {
 
 .square-image {
     height: 300px; /* Altezza quadrata desiderata */
-    width: auto; /* Lascia che la larghezza si adatti proporzionalmente */
-    object-fit: cover; /* Mantiene le proporzioni dell'immagine */
+    width: 500%; /* Larghezza al 100% del contenitore */
+    object-fit: contain; /* Mantiene le proporzioni dell'immagine senza tagliare */
 }
 
 .carousel-item {
     text-align: center; /* Centra le immagini nel carousel */
     overflow: hidden; /* Nasconde overflow per evitare distorsioni */
-    max-width: 600px; /* Larghezza massima del carousel */
+    max-width: 500px; /* Larghezza massima del carousel */
     margin: 0 auto; /* Centra il carousel */
 }
 
-.carousel-caption {
-    position: absolute; /* Posiziona la caption sopra l'immagine */
-    bottom: 0; /* Allinea la caption in basso */
-    left: 0; /* Allinea la caption a sinistra */
-    width: 100%; /* Occupa l'intera larghezza dell'immagine */
-    padding: 10px;
-    background-color: rgba(237, 233, 209, 0.285); /* Sfondo semitrasparente per migliorare la leggibilità */
-    color: rgb(11, 11, 1);
-    text-align: center; /* Allinea il testo al centro */
-}
 
 .carousel-inner {
     height: 300px; /* Altezza quadrata del carousel */
@@ -297,6 +282,15 @@ footer {
     bottom: 0; /* Posizionato in fondo */
     left: 0; /* Allinea a sinistra */
     width: 100%; /* Larghezza al 100% */
+    z-index: 1000; /* Assicura che il footer sia sopra gli altri contenuti */
+}
+
+footer p {
+    font-size: 0.8em; /* Riduci la dimensione del testo del footer */
+    margin: 0; /* Rimuovi i margini predefiniti */
+    padding: 0; /* Rimuovi i padding predefiniti */
+    display: inline-block; /* Permette di centrare verticalmente */
+    vertical-align: middle; /* Centra verticalmente il testo */
 }
 
 footer, footer * {
@@ -314,9 +308,14 @@ footer, footer * {
     width: 25px;
     background-color: white;
     margin: 3px 0;
+    transition: 0.3s;
 }
 
 @media (max-width: 768px) {
+
+    footer {
+        position: relative; /* Cambia posizione a relativa per dispositivi più piccoli */
+    }
     
     nav ul {
         display: none; /* Nasconde il menù */
@@ -380,5 +379,9 @@ footer, footer * {
     .social-container {
         flex-direction: row; /* Mantiene l'orientamento orizzontale */
         gap: 10px;
+    }
+
+    .square-image {
+        height: 250px; /* Aumenta l'altezza delle immagini */
     }
 }
