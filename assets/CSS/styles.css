@@ -21,14 +21,16 @@ header {
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    margin-right: auto;
+    margin: 0;
+    padding: 0;
     animation: slideIn 1s ease-out;
 }
 
@@ -41,6 +43,38 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease-in-out; /* Aggiunge una transizione per l'effetto hover */
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: white; /* Mantiene il colore bianco anche quando i link sono in hover o focus */
+    text-decoration: none;
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #FFC75E;
+    visibility: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover::before,
+nav ul li a:focus::before {
+    visibility: visible;
+    width: 100%;
 }
 
 nav ul li a::before {
@@ -69,7 +103,7 @@ nav ul li a:hover::before {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: auto;
-    margin-right: 30px;
+    margin-right: 20px;
 }
 
 .btn-download:hover {
@@ -186,7 +220,7 @@ p {
 }
 
 .skill-item {
-    min-width: 150px; /* Mantieni questa larghezza per ogni skill */
+    min-width: 150px; /* Mantiene questa larghezza per ogni skill */
     margin: 10px; /* Margine per distanziare gli elementi */
 }
 
@@ -294,9 +328,9 @@ footer {
 }
 
 footer p {
-    font-size: 1.0em; /* Riduci la dimensione del testo del footer */
-    margin: 0; /* Rimuovi i margini predefiniti */
-    padding: 0; /* Rimuovi i padding predefiniti */
+    font-size: 1.0em; /* Riduce la dimensione del testo del footer */
+    margin: 0; /* Rimuove i margini predefiniti */
+    padding: 0; /* Rimuove i padding predefiniti */
     display: inline-block; /* Permette di centrare verticalmente */
     vertical-align: middle; /* Centra verticalmente il testo */
 }
@@ -305,13 +339,14 @@ footer, footer * {
     color: #fff !important;
 }
 
-.menu-toggle {
+.hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    padding: 10px; /* Aggiungi padding per aumentare l'area cliccabile */
 }
 
-.menu-toggle .bar {
+.bar {
     height: 3px;
     width: 25px;
     background-color: white;
@@ -323,6 +358,10 @@ footer, footer * {
 
     footer {
         position: relative; /* Cambia posizione a relativa per dispositivi più piccoli */
+    }
+
+    header {
+        padding: 0.5rem 0;
     }
     
     nav ul {
@@ -336,13 +375,13 @@ footer, footer * {
         z-index: 1000;
     }
 
-    nav.active ul {
-        display: flex; /* Mostra il menu quando attivo */
+    nav ul.active {
+        display: flex; /* Mostra il menù quando attivo */
     }
 
-    .menu-toggle {
-        display: flex; /* Mostra il bottone per il menu a hamburger */
-        margin-left: 10px;
+    .hamburger {
+        display: flex;
+        margin-left: 20px; /* Distanza dal bordo sinistro */
     }
 
     nav ul li {
@@ -356,7 +395,7 @@ footer, footer * {
     }
 
     .hero-description {
-        padding-left: 0; /* Rimuovi padding a sinistra */
+        padding-left: 0; /* Rimuove padding a sinistra */
         text-align: center; /* Allinea il testo al centro */
     }
 

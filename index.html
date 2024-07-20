@@ -17,13 +17,13 @@
 </head>
 <body>
     <header>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+        <nav>
+            <div class="hamburger" id="hamburger">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-            <nav>
-             <ul>
+            <ul id="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="portfolio.html">I miei progetti</a></li>
                 <li><a href="contact.html">Contatti</a></li>
@@ -132,6 +132,14 @@
     <footer>
         <p>&copy; 2024 sito web di Balia Katiuscia. Tutti i diritti riservati.</p>
     </footer>
-    <script src="assets/JS/index.js"></script>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
