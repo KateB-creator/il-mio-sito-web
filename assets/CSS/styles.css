@@ -1,5 +1,5 @@
 body {
-    font-family: 'Lora', serif;;
+    font-family: 'Lora', serif;
     background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
     background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
     background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
@@ -102,7 +102,7 @@ nav ul li a:hover::before {
     flex: 2;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 800px; /* Imposta la larghezza massima */
+    max-width: 800px; /* larghezza massima */
 }
 
 .hero-description h1 {
@@ -114,12 +114,10 @@ nav ul li a:hover::before {
 .hero-description p {
     font-family: 'Lora', serif; /* Font per il paragrafo */
     font-size: 1.2em; /* Dimensione del font */
-    font-size: 1.2em; /* Modifica questa dimensione */
     margin-bottom: 20px;
     line-height: 1.5;
     max-width: 100%; /* Limita la larghezza del paragrafo */
 }
-
 
 main {
     padding: 20px;
@@ -268,7 +266,7 @@ p {
     display: flex;
     justify-content: center; /* Centra le icone */
     gap: 30px; /* Spazio tra le icone */
-    margin-bottom: 80px; 
+    margin-bottom: 50px; 
 }
 
 .social-icon {
@@ -296,7 +294,7 @@ footer {
 }
 
 footer p {
-    font-size: 0.8em; /* Riduci la dimensione del testo del footer */
+    font-size: 1.0em; /* Riduci la dimensione del testo del footer */
     margin: 0; /* Rimuovi i margini predefiniti */
     padding: 0; /* Rimuovi i padding predefiniti */
     display: inline-block; /* Permette di centrare verticalmente */
@@ -344,7 +342,7 @@ footer, footer * {
 
     .menu-toggle {
         display: flex; /* Mostra il bottone per il menu a hamburger */
-        margin-left: 20px;
+        margin-left: 10px;
     }
 
     nav ul li {
