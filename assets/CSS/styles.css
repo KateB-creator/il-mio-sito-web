@@ -95,8 +95,8 @@ nav ul li a:hover::before {
 }
 
 .btn-download {
-    background-color: #FFC75E;
-    color: white;
+    background-color: #ffc75e;
+    color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
