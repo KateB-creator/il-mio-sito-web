@@ -86,7 +86,7 @@ nav ul li a:hover::before {
 
 .btn-download {
     background-color: #FFC75E;
-    color: white;
+    color: rgb(5, 18, 47);
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
@@ -97,7 +97,7 @@ nav ul li a:hover::before {
 }
 
 .btn-download:hover {
-    background-color: #ffab00;
+    background-color: #fffbf4;
 }
 
 main {
@@ -133,14 +133,14 @@ main {
     margin-top: 1rem;
     padding: 0.5rem;
     background-color: #333;
-    color: #fff;
+    color: #fefeff;
     border: none;
     border-radius: 4px;
     cursor: pointer;
 }
 
 #contact form button:hover {
-    background-color: #FFC75E;
+    background-color: #ffab00;
 }
 
 .social-container {

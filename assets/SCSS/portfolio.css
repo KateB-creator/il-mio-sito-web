@@ -62,7 +62,7 @@ nav ul li a:hover::before {
 
 .btn-download {
   background-color: #FFC75E;
-  color: white;
+  color: rgb(5, 18, 47);
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
@@ -72,7 +72,7 @@ nav ul li a:hover::before {
   margin-right: 20px;
 }
 .btn-download:hover {
-  background-color: #ffab00;
+  background-color: #fffbf4;
 }
 
 main h1.special-font {
