@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="Il mio sito web">
+    <meta name="description" content="Contatta Balia Katiuscia, sviluppatrice full stack, per collaborazioni e progetti di programmazione e design.">
+    <meta property="og:title" content="Contatti - Balia Katiuscia | Sviluppatrice Full Stack">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kateb-creator.github.io/il-mio-sito-web/">
     <meta property="og:image" content="https://raw.githubusercontent.com/KateB-creator/il-mio-sito-web/main/assets/img/anteprima_portfolio.png">
     <meta property="og:description" content="Scopri i miei lavori di programmazione e design.">
     <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="assets/CSS/contact.css">
-    <title>Contatti-Balia Katiuscia</title>
+    <link rel="preload" href="assets/CSS/contact.css" as="style">
+    <title>Contatti - Balia Katiuscia | Sviluppatrice Full Stack</title>
 </head>
 <body>
     <header>
@@ -31,7 +33,8 @@
     
     <main>
         <section id="contact">
-            <h1>Inviami un messaggio</h1>
+            <h1>Contatti</h1>
+            <h2>Inviami un messaggio</h2>
             <form id="contact-form">
                 <label for="name">Nome:</label>
                 <input type="text" id="name" name="name" required>
@@ -42,24 +45,32 @@
                 <button type="submit">Invia</button>
             </form>
         </section>
+
+        <section class="social">
+            <h2>Connettiti con me e scopri il mio percorso lavorativo</h2>
+            <div class="social-container">
+                <a href="https://talent.start2impact.it/profile/katiuscia-balia-71206396-6900-44db-82b9-f0e10f1a3e9a" class="social-icon" target="_blank">
+                    <img src="assets/img/start2impact.png" alt="Profilo di Katiuscia Balia su Start2Impact" loading="lazy">
+                </a>
+                <a href="https://github.com/KateB-creator/il-mio-sito-web" class="social-icon" target="_blank">
+                    <img src="assets/img/githubhomepage.png" alt="Profilo GitHub di Katiuscia Balia" loading="lazy">
+                </a>
+                <a href="https://www.linkedin.com/in/katiuscia-balia-078b82244/" class="social-icon" target="_blank">
+                    <img src="assets/img/linkedin.png" alt="Profilo LinkedIn di Katiuscia Balia" loading="lazy">
+                </a>
+                <a href="https://www.instagram.com/katiuscia_balia/" class="social-icon" target="_blank">
+                    <img src="assets/img/instagram.png" alt="Profilo Instagram di Katiuscia Balia" loading="lazy">
+                </a>
+            </div>
+        </section>
     </main>
 
-    <section class="social">
-        <h2>Connettiti con me e scopri il mio percorso lavorativo</h2>
-        <div class="social-container">
-            <a href="https://talent.start2impact.it/profile/katiuscia-balia-71206396-6900-44db-82b9-f0e10f1a3e9a" class="social-icon" target="_blank"><img src="assets/img/start2impact.png" alt="start2impact" loading="lazy"></a>
-            <a href="https://github.com/KateB-creator/il-mio-sito-web" class="social-icon" target="_blank"><img src="assets/img/githubhomepage.png" alt="github" loading="lazy"></a>
-            <a href="https://www.linkedin.com/in/katiuscia-balia-078b82244/" class="social-icon" target="_blank"><img src="assets/img/linkedin.png" alt="LinkedIn" loading="lazy"></a>
-            <a href="https://www.instagram.com/katiuscia_balia/" class="social-icon" target="_blank"><img src="assets/img/instagram.png" alt="Instagram" loading="lazy"></a>
-        </div>
-    </section>
-    
     <footer>
         <p>&copy; 2024 sito web di Balia Katiuscia. Tutti i diritti riservati.</p>
     </footer>
 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script src="assets/JS/contact.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js" async></script>
+    <script src="assets/JS/contact.js" defer></script>
     <script>
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
@@ -68,6 +79,19 @@
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Balia Katiuscia",
+      "jobTitle": "Sviluppatrice Full Stack",
+      "url": "https://kateb-creator.github.io/il-mio-sito-web/",
+      "sameAs": [
+        "https://www.linkedin.com/in/katiuscia-balia-078b82244/",
+        "https://github.com/KateB-creator"
+      ]
+    }
     </script>
 </body>
 </html>
