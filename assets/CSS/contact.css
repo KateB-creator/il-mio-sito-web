@@ -204,7 +204,7 @@ footer {
     nav ul {
         display: none;
         flex-direction: column;
-        width: 100%;
+        width: calc(100% - 40px); /* Riduce la larghezza per lasciare uno spazio ai lati */
         background-color: #333;
         position: absolute;
         top: 60px;
@@ -224,7 +224,7 @@ footer {
     nav ul li {
         padding: 10px;
         text-align: left;
-        padding-left: 20px; /*  padding a sinistra */
+        padding-left: 20px; /* padding a sinistra */
     }
 }
 
