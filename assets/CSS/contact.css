@@ -263,6 +263,7 @@ footer {
     nav ul li {
         padding: 8px;
         margin: 0.3rem 0;
+        padding-left: 20px;
     }
 
     main {
