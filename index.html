@@ -30,14 +30,18 @@
         </nav>
     </header>
 
+    <!-- Nuovo contenuto -->
+    <div class="main-content">
+        <h1>Katiuscia Balia</h1>
+        <p id="changing-text">I'm <span class="changing-words">Studentessa in full stack developer</span></p>
+    </div>
+
     <main>
         <div class="hero-container">
             <div class="hero-image">
                 <img src="assets/img/foto-profilo.png" alt="La mia foto" class="left-image" loading="lazy" width="300" height="300">
             </div>
             <div class="hero-description">
-                <h1>Katiuscia Balia</h1>
-                <p>Studentessa in full stack development.</p>
                 <h2>About me!</h2>
                 <p>Ho iniziato la mia carriera come progettista CADCAM dentale, attratta dalla possibilità di usare la tecnologia per migliorare la vita delle persone.</p>
                 <p>In questo ruolo, ho acquisito solide competenze in progettazione 3D e produzione. Col tempo, il mio interesse si è spostato verso lo sviluppo web e delle app, riconoscendo il loro potenziale impatto positivo sulla società.</p>
@@ -50,6 +54,22 @@
             <img src="assets/img/education.png" alt="education" class="extra-image" loading="lazy" width="400" height="300">
             <img src="assets/img/abilità-personali.png" alt="abilita" class="extra-image" loading="lazy" width="400" height="300">
         </div>
+
+        <section class="experience">
+            <h2>La mia Esperienza Lavorativa</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h3>Progettista CADCAM Dentale</h3>
+                    <p>Ho lavorato come progettista CADCAM dentale, dove ho acquisito competenze significative nella progettazione 3D e nella produzione.</p>
+                    <p><strong>Periodo:</strong> Giugno 2017 - Marzo 2024</p>
+                </div>
+                <div class="experience-item">
+                    <h3>Sviluppatrice Junior</h3>
+                    <p>Attualmente sto frequentando un master in full stack development presso la Start2Impact, dove sto acquisendo competenze in varie tecnologie per lo sviluppo web e mobile. </p>
+                    <p><strong>Periodo:</strong> Giugno 2024 - Presente</p>
+                </div>
+            </div>
+        </section>
        
         <section class="SKILLS">
             <h2>Skills</h2>
@@ -108,7 +128,7 @@
     <footer>
         <p>&copy; 2024 sito web di Balia Katiuscia. Tutti i diritti riservati.</p>
     </footer>
-    <script>
+    <script> 
         const hamburger = document.getElementById('hamburger');
         const navLinks = document.getElementById('nav-links');
 
@@ -116,6 +136,48 @@
             navLinks.classList.toggle('active');
             hamburger.classList.toggle('active');
         });
-    </script>
+
+        // JavaScript per cambiare le parole
+        const words = ["a cad/cam designer", "a Graphic Designer", "a full stack developer student"];
+        let index = 0;
+
+        function changeWord() {
+            const wordElement = document.querySelector(".changing-words");
+            wordElement.textContent = words[index];
+            index = (index + 1) % words.length;
+        }
+
+        setInterval(changeWord, 2000);
+    </script> 
+
+<script>
+    // Funzione per controllare se l'elemento è visibile
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Funzione per aggiungere la classe 'animate' quando l'elemento è nella vista
+    function handleScroll() {
+        const items = document.querySelectorAll('.experience-item');
+        items.forEach(item => {
+            if (isInViewport(item)) {
+                item.classList.add('animate');
+            }
+        });
+    }
+
+    // Aggiungi l'evento di scroll
+    window.addEventListener('scroll', handleScroll);
+
+    // Controlla la visibilità all'avvio
+    document.addEventListener('DOMContentLoaded', handleScroll);
+</script>
+
 </body>
 </html>

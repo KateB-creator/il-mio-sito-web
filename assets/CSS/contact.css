@@ -9,7 +9,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 120px;
-    background-image: url("../img/sfondo_contact.png");
+    background-image: url("../img/sfondo.png");
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100vh;
@@ -107,7 +107,7 @@ main {
     flex: 1;
     max-width: 800px;
     margin: auto;
-    background-color: #ffffff;
+    background-color: #ffffffb1;
     box-shadow: 0 0 10px rgba(2, 9, 48, 0.989);
 }
 
@@ -143,35 +143,44 @@ main {
     background-color: #ffab00;
 }
 
-.social h2 {
-    color: #000000;
-    text-align: center;
-    margin-top: 40px;
+#social {
+    background: #ffffff00; /* Colore di sfondo per la sezione Social */
+    padding: 40px 20px; /* Spaziatura interna di 40px sopra e sotto, 20px sui lati */
+    text-align: center; /* Allinea il testo e le icone al centro */
+    margin-bottom: 100px; /* Aggiungi spazio inferiore per evitare che il piè di pagina copra la sezione */
+    margin-top: 40pxpx;
 }
 
-.social-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-    margin-top: 40px;
-    margin-bottom: 80px;
+#social h2 {
+    margin-bottom: 20px; /* Margine inferiore di 20px per il titolo */
+    font-size: 24px; /* Dimensione del font del titolo */
+}
+
+.social-icons {
+    display: flex; /* Usa Flexbox per disporre le icone */
+    justify-content: center; /* Centra le icone orizzontalmente */
+    gap: 30px; /* Spazio tra le icone */
 }
 
 .social-icon {
-    display: inline-block;
-    width: 50px;
-    height: 50px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.social-icon img {
-    width: 100%;
-    height: 100%;
+    display: inline-block; /* Dispone le icone come blocchi in linea */
+    font-size: 36px; /* Dimensione delle icone */
+    color: #333; /* Colore delle icone */
+    transition: color 0.3s ease, transform 0.3s ease; /* Transizioni per colore e trasformazione */
+    text-decoration: none; /* Rimuove la sottolineatura */
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    color: #ffab00; /* Colore delle icone al passaggio del mouse */
+    transform: scale(1.2); /* Ingrandisce leggermente l'icona al passaggio del mouse */
+}
+
+.social-icon i {
+    transition: transform 0.3s ease; /* Transizione per la trasformazione delle icone */
+}
+
+.social-icon:hover i {
+    transform: rotate(360deg); /* Ruota l'icona di 360 gradi al passaggio del mouse */
 }
 
 footer {

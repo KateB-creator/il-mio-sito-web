@@ -79,11 +79,34 @@ nav ul li a:focus::before {
     font-weight: bold;
     transition: background-color 0.3s ease;
     margin-left: auto;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
 .btn-download:hover {
     background-color: #fffbf4;
+}
+
+.main-content {
+    text-align: center;
+    margin: 20px auto;
+    padding: 40px; /* Aumentato per maggiore spazio interno */
+    background-color: #f9f9f900;
+    border-radius: 10px;
+    margin-top: 60px;
+    max-width: 100%; /* Imposta una larghezza massima per il div */
+}
+
+#changing-text {
+    font-size: 2.5rem; /* Aumentato per maggiore impatto */
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 40px;
+}
+
+.changing-words {
+    color: #ffdd00; /* Puoi cambiare il colore a tuo piacimento */
+    font-size: 2.3rem; /* Maggiore dimensione per le parole in cambiamento */
+    font-weight: bold;
 }
 
 .hero-container {
@@ -91,7 +114,7 @@ nav ul li a:focus::before {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-top: 50px; /* Distanza dall'header */
+    margin-top: 30px; /* Distanza dall'header */
 }
 
 .hero-image {
@@ -103,9 +126,10 @@ nav ul li a:focus::before {
 }
 
 .left-image {
-    max-width: 100%;
-    height: auto;
+    width: 500px; /* Imposta una larghezza fissa per la foto profilo */
+    height: 500px; /* Imposta un'altezza fissa per la foto profilo */
     border-radius: 10px;
+    object-fit: cover; /* Assicura che l'immagine riempia il box senza distorsioni */
 }
 
 .hero-description {
@@ -174,6 +198,57 @@ p {
 .extra-image:hover {
     transform: scale(1.05);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.experience {
+    padding: 40px 20px;
+    background-color: #e0e0e000; /* Colore di sfondo per distinguere la sezione */
+    text-align: center;
+}
+
+.experience h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.experience-item {
+    background-color: #ffffff93;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0; /* Inizialmente nascosto per animazione */
+    transform: translateX(-20px); /* Inizialmente spostato verso sinistra */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.experience-item.visible {
+    opacity: 1;
+    transform: translateX(0); /* Ritorna alla posizione originale */
+}
+
+/* Animazione di scorrimento */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.experience-item.animate {
+    animation: slideIn 0.5s ease forwards;
 }
 
 .skills {

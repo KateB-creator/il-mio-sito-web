@@ -6,10 +6,11 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../img/sfondo.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
+    background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
+    background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
+    background-position: center; /* Centra l'immagine */
+    margin: 0;
   padding: 20px;
 }
 
