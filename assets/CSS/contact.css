@@ -9,9 +9,9 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding-top: 120px;
-    background-image: url("../img/sfondo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), /* Mare */
+                linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
+    background-blend-mode: overlay; /* Miscelare i gradienti */
     min-height: 100vh;
 }
 
@@ -148,7 +148,7 @@ main {
     padding: 40px 20px; /* Spaziatura interna di 40px sopra e sotto, 20px sui lati */
     text-align: center; /* Allinea il testo e le icone al centro */
     margin-bottom: 100px; /* Aggiungi spazio inferiore per evitare che il piè di pagina copra la sezione */
-    margin-top: 40pxg;
+    margin-top: 40px;
 }
 
 #social h2 {
@@ -160,6 +160,7 @@ main {
     display: flex; /* Usa Flexbox per disporre le icone */
     justify-content: center; /* Centra le icone orizzontalmente */
     gap: 30px; /* Spazio tra le icone */
+    margin-top: 40px;
 }
 
 .social-icon {

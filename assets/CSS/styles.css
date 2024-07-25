@@ -1,9 +1,8 @@
 body {
     font-family: 'Lora', serif;
-    background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
-    background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
-    background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
-    background-position: center; /* Centra l'immagine */
+    background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), /* Mare */
+                linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
+    background-blend-mode: overlay; /* Miscelare i gradienti */
     margin: 0;
     padding: 0;
 }
@@ -99,12 +98,12 @@ nav ul li a:focus::before {
 #changing-text {
     font-size: 2.5rem; /* Aumentato per maggiore impatto */
     font-weight: bold;
-    color: #07023b;
+    color: #54045a;
     margin-top: 40px;
 }
 
 .changing-words {
-    color: #001630; /* Puoi cambiare il colore a tuo piacimento */
+    color: #030150; /* Puoi cambiare il colore a tuo piacimento */
     font-size: 2.3rem; /* Maggiore dimensione per le parole in cambiamento */
     font-weight: bold;
 }

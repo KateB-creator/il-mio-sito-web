@@ -6,11 +6,8 @@
 
 body {
   font-family: Arial, sans-serif;
-  background-image: url("../img/sfondo.png"); /* Specifica il percorso dell'immagine */
-    background-size: cover; /* Assicura che l'immagine copra l'intera area del body */
-    background-repeat: no-repeat; /* Evita che l'immagine venga ripetuta */
-    background-position: center; /* Centra l'immagine */
-    margin: 0;
+  background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
+  background-blend-mode: overlay; /* Miscelare i gradienti */
   padding: 20px;
 }
 
@@ -45,7 +42,6 @@ nav ul li a {
   font-weight: bold;
   position: relative;
 }
-
 nav ul li a::before {
   content: "";
   position: absolute;
@@ -57,7 +53,6 @@ nav ul li a::before {
   visibility: hidden;
   transition: all 0.3s ease-in-out;
 }
-
 nav ul li a:hover::before {
   visibility: visible;
   width: 100%;
@@ -127,7 +122,6 @@ footer {
   flex-direction: column;
   cursor: pointer;
 }
-
 .hamburger .bar {
   height: 3px;
   width: 25px;
@@ -192,12 +186,10 @@ footer {
   nav ul.active {
     display: flex;
   }
-
   nav ul li {
     padding: 10px;
     text-align: left;
   }
-  
   .hamburger {
     display: flex;
     margin-left: 20px;
