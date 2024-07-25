@@ -148,7 +148,7 @@ main {
     padding: 40px 20px; /* Spaziatura interna di 40px sopra e sotto, 20px sui lati */
     text-align: center; /* Allinea il testo e le icone al centro */
     margin-bottom: 100px; /* Aggiungi spazio inferiore per evitare che il piè di pagina copra la sezione */
-    margin-top: 40px;
+    margin-top: 40pxg;
 }
 
 #social h2 {
