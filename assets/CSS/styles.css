@@ -90,7 +90,7 @@ nav ul li a:focus::before {
     text-align: center;
     margin: 20px auto;
     padding: 40px; /* Aumentato per maggiore spazio interno */
-    background-color: #f9f9f900;
+    background-color: #00d9ff00;
     border-radius: 10px;
     margin-top: 60px;
     max-width: 100%; /* Imposta una larghezza massima per il div */
@@ -99,12 +99,12 @@ nav ul li a:focus::before {
 #changing-text {
     font-size: 2.5rem; /* Aumentato per maggiore impatto */
     font-weight: bold;
-    color: #090229;
+    color: #ffd000;
     margin-top: 40px;
 }
 
 .changing-words {
-    color: #ffffff; /* Puoi cambiare il colore a tuo piacimento */
+    color: #001630; /* Puoi cambiare il colore a tuo piacimento */
     font-size: 2.3rem; /* Maggiore dimensione per le parole in cambiamento */
     font-weight: bold;
 }
@@ -406,6 +406,11 @@ footer, footer * {
 }
 
 @media (max-width: 768px) {
+    .left-image {
+        width: 300px; /* Dimensione per schermi medi */
+        height: 300px;
+    }
+
     footer {
         position: relative; /* Cambia posizione a relativa per dispositivi più piccoli */
     }
