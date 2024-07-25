@@ -1,3 +1,10 @@
+/* Generale */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 body {
     font-family: 'Lora', serif;
     background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), /* Mare */
@@ -7,6 +14,7 @@ body {
     padding: 0;
 }
 
+/* Header */
 header {
     background-color: #333;
     color: white;
@@ -18,6 +26,7 @@ header {
     z-index: 1000;
 }
 
+/* Navigazione */
 nav {
     display: flex;
     justify-content: space-between;
@@ -42,12 +51,12 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     position: relative;
-    transition: color 0.3s ease-in-out; /* Aggiunge una transizione per l'effetto hover */
+    transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover,
 nav ul li a:focus {
-    color: white; /* Mantiene il colore bianco anche quando i link sono in hover o focus */
+    color: white;
     text-decoration: none;
 }
 
@@ -69,6 +78,7 @@ nav ul li a:focus::before {
     width: 100%;
 }
 
+/* Bottone di download */
 .btn-download {
     background-color: #d6a8ddfa;
     color: rgb(0, 0, 0);
@@ -85,35 +95,37 @@ nav ul li a:focus::before {
     background-color: #fffbf4;
 }
 
+/* Contenuto principale */
 .main-content {
     text-align: center;
     margin: 20px auto;
-    padding: 40px; /* Aumentato per maggiore spazio interno */
-    background-color: #00d9ff00;
+    padding: 40px;
+    background-color: #00d9ff00; /* Trasparente */
     border-radius: 10px;
     margin-top: 60px;
-    max-width: 100%; /* Imposta una larghezza massima per il div */
+    max-width: 100%;
 }
 
 #changing-text {
-    font-size: 2.5rem; /* Aumentato per maggiore impatto */
+    font-size: 2.5rem;
     font-weight: bold;
     color: #54045a;
     margin-top: 20px;
 }
 
 .changing-words {
-    color: #030150; /* Puoi cambiare il colore a tuo piacimento */
-    font-size: 2.3rem; /* Maggiore dimensione per le parole in cambiamento */
+    color: #030150;
+    font-size: 2.3rem;
     font-weight: bold;
 }
 
+/* Hero Container */
 .hero-container {
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-top: 30px; /* Distanza dall'header */
+    margin-top: 30px;
 }
 
 .hero-image {
@@ -125,33 +137,34 @@ nav ul li a:focus::before {
 }
 
 .left-image {
-    width: 500px; /* Imposta una larghezza fissa per la foto profilo */
-    height: 500px; /* Imposta un'altezza fissa per la foto profilo */
+    width: 500px;
+    height: 500px;
     border-radius: 10px;
-    object-fit: cover; /* Assicura che l'immagine riempia il box senza distorsioni */
+    object-fit: cover;
 }
 
 .hero-description {
     flex: 2;
     padding-left: 20px;
     padding-right: 20px;
-    max-width: 800px; /* larghezza massima */
+    max-width: 800px;
 }
 
 .hero-description h1 {
-    font-family: 'Playfair Display', serif; /* Font per il titolo */
-    font-size: 2.5em; /* Dimensione del titolo */
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .hero-description p {
-    font-family: 'Lora', serif; /* Font per il paragrafo */
-    font-size: 1.2em; /* Dimensione del font */
+    font-family: 'Lora', serif;
+    font-size: 1.2em;
     margin-bottom: 20px;
     line-height: 1.5;
-    max-width: 100%; /* Limita la larghezza del paragrafo */
+    max-width: 100%;
 }
 
+/* Main */
 main {
     padding: 20px;
     text-align: center;
@@ -179,6 +192,7 @@ p {
     margin: 10px 0;
 }
 
+/* Immagini */
 .images {
     text-align: center;
     background-color: #f0f0f000;
@@ -199,9 +213,10 @@ p {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
+/* Esperienza */
 .experience {
     padding: 40px 20px;
-    background-color: #e0e0e000; /* Colore di sfondo per distinguere la sezione */
+    background-color: #e0e0e000;
     text-align: center;
 }
 
@@ -224,17 +239,16 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 600px;
     margin: 0 auto;
-    opacity: 0; /* Inizialmente nascosto per animazione */
-    transform: translateX(-20px); /* Inizialmente spostato verso sinistra */
+    opacity: 0;
+    transform: translateX(-20px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .experience-item.visible {
     opacity: 1;
-    transform: translateX(0); /* Ritorna alla posizione originale */
+    transform: translateX(0);
 }
 
-/* Animazione di scorrimento */
 @keyframes slideIn {
     from {
         opacity: 0;
@@ -250,6 +264,7 @@ p {
     animation: slideIn 0.5s ease forwards;
 }
 
+/* Competenze */
 .skills {
     padding: 50px 0;
     text-align: center;
@@ -265,13 +280,13 @@ p {
 .skills-container {
     display: flex;
     justify-content: center;
-    overflow-x: auto; /* Permette lo scorrimento orizzontale */
+    overflow-x: auto;
     width: 100%;
 }
 
 .skill-item {
-    min-width: 150px; /* Mantiene questa larghezza per ogni skill */
-    margin: 10px; /* Margine per distanziare gli elementi */
+    min-width: 150px;
+    margin: 10px;
 }
 
 .skill-item img {
@@ -286,40 +301,37 @@ p {
     transform: scale(1.1);
 }
 
+/* Hobby */
 .hobbies {
     padding: 20px;
     background-color: #f7f7f700;
 }
 
-/* Stile per il titolo "I miei hobby" */
 .hobbies h2 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 28px;
 }
 
-/* Stile per il paragrafo introduttivo */
 .hobbies p {
     text-align: center;
     margin-bottom: 30px;
     font-size: 18px;
 }
 
-/* Stile per la galleria di immagini */
+/* Galleria */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 
-/* Stile per ogni figura (immagine con descrizione) */
 .gallery figure {
     text-align: center;
     margin: 0;
     padding: 0;
 }
 
-/* Stile per le immagini */
 .gallery img {
     width: 100%;
     height: auto;
@@ -328,19 +340,18 @@ p {
     transition: transform 0.3s ease;
 }
 
-/* Stile per la descrizione sotto l'immagine */
 .gallery figcaption {
     margin-top: 10px;
     font-size: 16px;
     color: #000000;
 }
 
-/* Effetto hover per l'immagine */
 .gallery figure:hover img {
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Social */
 .follow-us {
     text-align: center;
     margin-bottom: 50px;
@@ -348,52 +359,54 @@ p {
 
 .social-links {
     display: flex;
-    justify-content: center; /* Centra le icone */
-    gap: 30px; /* Spazio tra le icone */
+    justify-content: center;
+    gap: 30px;
     margin-bottom: 50px; 
 }
 
 .social-icon {
-    width: 50px; /* Dimensione dell'icona */
-    height: 50px; /* Dimensione dell'icona */
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease; /* Transizioni per effetti */
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-icon:hover {
-    transform: rotate(360deg) scale(1.1); /* Ruota e ingrandisce l'icona */
-    filter: brightness(1.2); /* Aggiunge luminosità al passaggio del mouse */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Ombra al passaggio del mouse */
+    transform: rotate(360deg) scale(1.1);
+    filter: brightness(1.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Footer */
 footer {
     background-color: #333 !important;
     color: #fff !important;
     text-align: center;
     padding: 1rem 0;
-    position: fixed; /* Fisso in fondo alla pagina */
-    bottom: 0; /* Posizionato in fondo */
-    left: 0; /* Allinea a sinistra */
-    width: 100%; /* Larghezza al 100% */
-    z-index: 1000; /* Assicura che il footer sia sopra gli altri contenuti */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 footer p {
-    font-size: 1.0em; /* Riduce la dimensione del testo del footer */
-    margin: 0; /* Rimuove i margini predefiniti */
-    padding: 0; /* Rimuove i padding predefiniti */
-    display: inline-block; /* Permette di centrare verticalmente */
-    vertical-align: middle; /* Centra verticalmente il testo */
+    font-size: 1.0em;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
 }
 
 footer, footer * {
     color: #fff !important;
 }
 
+/* Menu Hamburger */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    padding: 10px; /* Aggiungi padding per aumentare l'area cliccabile */
+    padding: 10px;
 }
 
 .bar {
@@ -404,14 +417,15 @@ footer, footer * {
     transition: 0.3s;
 }
 
+/* Media Queries */
 @media (max-width: 768px) {
     .left-image {
-        width: 300px; /* Dimensione per schermi medi */
+        width: 300px;
         height: 300px;
     }
 
     footer {
-        position: relative; /* Cambia posizione a relativa per dispositivi più piccoli */
+        position: relative;
     }
 
     header {
@@ -419,38 +433,38 @@ footer, footer * {
     }
     
     nav ul {
-        display: none; /* Nasconde il menù */
-        flex-direction: column; /* Disposizione a colonna */
+        display: none;
+        flex-direction: column;
         width: 100%;
         background-color: #333;
         position: absolute;
-        top: 60px; /* Posizione sotto l'header */
+        top: 60px;
         left: 0;
         z-index: 1000;
     }
 
     nav ul.active {
-        display: flex; /* Mostra il menù quando attivo */
+        display: flex;
     }
 
     .hamburger {
         display: flex;
-        margin-left: 20px; /* Distanza dal bordo sinistro */
+        margin-left: 20px;
     }
 
     nav ul li {
-        padding: 10px; /* Padding per migliorare il clic */
-        text-align: left; /* Allineamento a sinistra */
-    }   
+        padding: 10px;
+        text-align: left;
+    }
     
     .hero-container {
-        flex-direction: column; /* Cambia la direzione in colonna */
-        align-items: center; /* Allinea al centro */
+        flex-direction: column;
+        align-items: center;
     }
 
     .hero-description {
-        padding-left: 0; /* Rimuove padding a sinistra */
-        text-align: center; /* Allinea il testo al centro */
+        padding-left: 0;
+        text-align: center;
     }
 
     .gallery {
@@ -462,8 +476,9 @@ footer, footer * {
         flex-direction: column;
         align-items: center;
     }
+    
     .skill-item {
-        width: 50%; /* Occupa l'80% della larghezza del contenitore su mobile */
+        width: 50%;
         max-width: none;
     }
 }
@@ -485,7 +500,7 @@ footer, footer * {
     }
 
     .social-container {
-        flex-direction: row; /* Mantiene l'orientamento orizzontale */
+        flex-direction: row;
         gap: 10px;
     }
 
