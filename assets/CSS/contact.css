@@ -59,7 +59,7 @@ nav ul li a::before {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #FFC75E;
+    background-color: #b507d0ae;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -85,7 +85,7 @@ nav ul li a:hover::before {
 }
 
 .btn-download {
-    background-color: #FFC75E;
+    background-color: #d6a8dd;
     color: rgb(5, 18, 47);
     padding: 10px 20px;
     text-decoration: none;
@@ -140,7 +140,7 @@ main {
 }
 
 #contact form button:hover {
-    background-color: #ffab00;
+    background-color: #b507d0ae;
 }
 
 #social {
@@ -172,7 +172,7 @@ main {
 }
 
 .social-icon:hover {
-    color: #ffab00; /* Colore delle icone al passaggio del mouse */
+    color: #b507d0ae; /* Colore delle icone al passaggio del mouse */
     transform: scale(1.2); /* Ingrandisce leggermente l'icona al passaggio del mouse */
 }
 

@@ -58,7 +58,7 @@ nav ul li a::before {
     height: 2px;
     bottom: -5px;
     left: 0;
-    background-color: #FFC75E;
+    background-color: #b507d0ae;
     visibility: hidden;
     transition: all 0.3s ease-in-out;
 }
@@ -70,7 +70,7 @@ nav ul li a:focus::before {
 }
 
 .btn-download {
-    background-color: #ffc75e;
+    background-color: #d6a8ddfa;
     color: rgb(0, 0, 0);
     padding: 10px 20px;
     text-decoration: none;
@@ -99,7 +99,7 @@ nav ul li a:focus::before {
     font-size: 2.5rem; /* Aumentato per maggiore impatto */
     font-weight: bold;
     color: #54045a;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .changing-words {
@@ -121,7 +121,7 @@ nav ul li a:focus::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 .left-image {
