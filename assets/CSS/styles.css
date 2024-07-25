@@ -458,6 +458,15 @@ footer, footer * {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 10px;
     }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .skill-item {
+        width: 50%; /* Occupa l'80% della larghezza del contenitore su mobile */
+        max-width: none;
+    }
 }
 
 @media (max-width: 480px) {
