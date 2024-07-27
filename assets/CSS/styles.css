@@ -102,7 +102,7 @@ nav ul li a:focus::before {
     padding: 40px;
     background-color: #00d9ff00; /* Trasparente */
     border-radius: 10px;
-    margin-top: 60px;
+    margin-top: 120px;
     max-width: 100%;
 }
 
@@ -110,7 +110,7 @@ nav ul li a:focus::before {
     font-size: 2.5rem;
     font-weight: bold;
     color: #54045a;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 .changing-words {
@@ -125,7 +125,7 @@ nav ul li a:focus::before {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .hero-image {
@@ -415,6 +415,135 @@ footer, footer * {
     background-color: white;
     margin: 3px 0;
     transition: 0.3s;
+}
+
+@media (max-width: 1024px) {
+    /* Regola per il contenuto principale */
+    .main-content {
+        padding: 30px;
+        margin-top: 100px;
+    }
+
+    /* Regola per il testo del changing-text */
+    #changing-text {
+        font-size: 2.2rem;
+        margin-top: 60px;
+    }
+
+    /* Regola per il testo del changing-words */
+    .changing-words {
+        font-size: 2rem;
+    }
+
+    /* Regola per l'immagine di sinistra */
+    .left-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    /* Regola per la descrizione dell'hero */
+    .hero-description {
+        padding-left: 15px;
+        padding-right: 15px;
+        max-width: 700px;
+    }
+
+    /* Regola per il testo della descrizione dell'hero */
+    .hero-description h1 {
+        font-size: 2.3em;
+    }
+
+    .hero-description p {
+        font-size: 1.1em;
+    }
+
+    /* Regola per le immagini extra */
+    .extra-image {
+        width: 80%;
+        max-width: 500px;
+    }
+
+    /* Regola per l'esperienza */
+    .experience-item {
+        max-width: 550px;
+    }
+
+    /* Regola per le competenze */
+    .skills-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .skill-item {
+        width: 40%;
+        max-width: none;
+    }
+
+    /* Regola per la galleria */
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    /* Regola per il footer */
+    footer {
+        position: relative;
+    }
+
+    header {
+        padding: 0.75rem 0;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1000;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+        margin-left: 20px;
+    }
+
+    nav ul li {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .hero-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-description {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .skill-item {
+        width: 50%;
+        max-width: none;
+    }
 }
 
 /* Media Queries */
