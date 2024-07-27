@@ -158,7 +158,7 @@ main {
 .social-icons {
     display: flex; /* Usa Flexbox per disporre le icone */
     justify-content: center; /* Centra le icone orizzontalmente */
-    gap: 30px; /* Spazio tra le icone */
+    gap: 50px; /* Spazio tra le icone */
     margin-top: 40px;
 }
 
@@ -172,19 +172,18 @@ main {
 
 .social-icon:hover {
     color: #b507d0ae; /* Colore delle icone al passaggio del mouse */
-    transform: scale(1.2); /* Ingrandisce leggermente l'icona al passaggio del mouse */
+    transform: scale(1.3); /* Ingrandisce leggermente l'icona al passaggio del mouse */
 }
 
 .social-icon i {
-    transition: transform 0.3s ease; /* Transizione per la trasformazione delle icone */
+    display: inline-block;
+    font-size: 36px;
+    animation: spin 2s linear infinite; /* Applicazione dell'animazione di rotazione continua */
 }
 
-.social-icon:hover i {
-    transform: rotate(0deg);  
-}
-
-.fa-rotate-by {
-    transform: rotate(0deg); 
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }
 
 footer {
