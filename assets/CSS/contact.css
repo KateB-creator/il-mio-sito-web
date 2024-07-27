@@ -1,4 +1,3 @@
-/* Generale */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -144,7 +143,7 @@ main {
 }
 
 #social {
-    background: #ffffff00; /* Colore di sfondo per la sezione Social */
+    background: transparent; /* Colore di sfondo per la sezione Social */
     padding: 40px 20px; /* Spaziatura interna di 40px sopra e sotto, 20px sui lati */
     text-align: center; /* Allinea il testo e le icone al centro */
     margin-bottom: 100px; /* Aggiungi spazio inferiore per evitare che il piè di pagina copra la sezione */
@@ -181,15 +180,11 @@ main {
 }
 
 .social-icon:hover i {
-    --fa-rotate-angle: 0deg;  
+    transform: rotate(0deg);  
 }
 
 .fa-rotate-by {
-    --fa-rotate-angle: 0deg; 
-}
-
-:root {
-    --fa-rotate-angle: 0deg; /* Valore di default valido per la rotazione */
+    transform: rotate(0deg); 
 }
 
 footer {
