@@ -184,6 +184,10 @@ main {
     transform: rotate(360deg); /* Ruota l'icona di 360 gradi al passaggio del mouse */
 }
 
+.fa-rotate-by {
+    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Correzione applicata */
+}
+
 footer {
     background-color: #050923;
     color: #fff;
