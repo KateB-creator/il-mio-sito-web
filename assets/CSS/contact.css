@@ -1,5 +1,5 @@
 :root {
-    --fa-rotate-angle: 0deg; /* Valore di default valido per la rotazione */
+    --fa-rotate-angle: none; /* Valore di default valido per la rotazione */
 }
 
 /* Generale */
@@ -185,11 +185,11 @@ main {
 }
 
 .social-icon:hover i {
-    transform: rotate(var(--fa-rotate-angle, 0deg)); 
+    transform: rotate(var(--fa-rotate-angle, none)); 
 }
 
 .fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg)); 
+    transform: rotate(var(--fa-rotate-angle, none)); 
 }
 
 footer {

@@ -476,7 +476,7 @@ footer, footer * {
     }
     
     .skill-item {
-        width: 40%;
+        width: 30%;
         max-width: none;
     }
 
@@ -541,7 +541,7 @@ footer, footer * {
     }
     
     .skill-item {
-        width: 50%;
+        width: 40%;
         max-width: none;
     }
 }
