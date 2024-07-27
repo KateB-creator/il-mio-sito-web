@@ -1,3 +1,7 @@
+:root {
+    --fa-rotate-angle: 0deg; /* Valore di default valido per la rotazione */
+}
+
 /* Generale */
 * {
     box-sizing: border-box;
@@ -181,11 +185,11 @@ main {
 }
 
 .social-icon:hover i {
-    transform: rotate(360deg); /* Ruota l'icona di 360 gradi al passaggio del mouse */
+    transform: rotate(var(--fa-rotate-angle, 0deg)); 
 }
 
 .fa-rotate-by {
-    transform: rotate(var(--fa-rotate-angle, 0deg)); /* Correzione applicata */
+    transform: rotate(var(--fa-rotate-angle, 0deg)); 
 }
 
 footer {
