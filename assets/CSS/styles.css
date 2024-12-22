@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 /* Generale */
 * {
     box-sizing: border-box;
@@ -6,10 +9,10 @@
 }
 
 body {
-    font-family: 'Lora', serif;
+    font-family: "Josefin Sans", serif;
     background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), /* Mare */
                 linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
-    background-blend-mode: overlay; /* Miscelare i gradienti */
+    background-blend-mode: overlay; 
     margin: 0;
     padding: 0;
 }
@@ -151,13 +154,13 @@ nav ul li a:focus::before {
 }
 
 .hero-description h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Josefin Sans", serif;
     font-size: 2.5em;
     margin-bottom: 10px;
 }
 
 .hero-description p {
-    font-family: 'Lora', serif;
+    font-family: "Josefin Sans", serif;
     font-size: 1.2em;
     margin-bottom: 20px;
     line-height: 1.5;
@@ -171,21 +174,21 @@ main {
 }
 
 h1 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Josefin Sans", serif;
     font-size: 2.5em;
     color: #000000;
     margin: 10px 0;
 }
 
 h2 {
-    font-family: 'Arial', sans-serif;
+    font-family: "Josefin Sans", serif;
     font-size: 2em;
     color: #000000;
     margin: 20px 0;
 }
 
 p {
-    font-family: 'Arial', sans-serif;
+    font-family: "Josefin Sans", serif;
     font-size: 1.3em;
     color: #000000;
     line-height: 1.5;

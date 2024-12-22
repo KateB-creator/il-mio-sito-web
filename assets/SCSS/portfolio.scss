@@ -1,235 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Variabili per i colori principali
+$white: #fff;
+$black: #333;
+$purple: #b507d0ae;
+$beach-gradient: linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3);
+$sea-gradient: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB);
+$button-bg: #d6a8ddfa;
+$button-hover-bg: #fffbf4;
+$text-color: #000;
+
+// Mixin per media queries
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == small {
+    @media screen and (max-width: 576px) { @content; }
+  } @else if $breakpoint == medium {
+    @media screen and (max-width: 768px) { @content; }
+  } @else if $breakpoint == large {
+    @media screen and (max-width: 992px) { @content; }
+  } @else if $breakpoint == xlarge {
+    @media screen and (max-width: 1200px) { @content; }
+  }
+}
+
+// Stili globali
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), /* Mare */
-    linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
-background-blend-mode: overlay; /* Miscelare i gradienti */
-    padding: 20px;
+  font-family: "Josefin Sans", serif;
+  background: $sea-gradient, $beach-gradient;
+  background-blend-mode: overlay;
+  padding: 20px;
+
+  @include respond-to(xlarge) {
+    padding: 15px;
+  }
+
+  @include respond-to(large) {
+    padding: 10px;
+  }
+
+  @include respond-to(medium) {
+    padding: 5px;
+  }
+
+  .progetto_uno {
+        margin-top: 80px;
+        
+        h2 {
+            font-family: "Josefin Sans", serif;
+            text-align: center;
+            margin-bottom: 20px;
+            
+        }
+
+        p {
+            font-size: 24px;
+        }
+
+        .img-hotelPomelia {
+            img{
+                max-width: 400px;
+            }
+        }
+    }
+
+    .progetto_due {
+        margin-top: 40px;
+        
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        a {
+            padding: 15px 30px 15px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: #fff;
+            border-radius: 36px;
+            background: linear-gradient(310deg, #9B3CB7 0%, #F24474 92.11%);
+            box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+        }
+ 
+
+        img {
+            max-width: 500px;
+        }
+    }
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1em;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+  background-color: $black;
+  color: $white;
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
 
-    ul {
-        list-style: none;
-        display: flex;
-        margin-right: auto;
-        animation: slideIn 1s ease-out;
+  ul {
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 0;
+    padding-left: 0;
+    animation: slideIn 1s ease-out;
 
-        li {
-            margin: 0 15px;
+    li {
+      margin: 0 15px;
 
-            a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                position: relative;
+      a {
+        color: $white;
+        text-decoration: none;
+        font-weight: bold;
+        position: relative;
 
-                &::before {
-                    content: "";
-                    position: absolute;
-                    width: 0;
-                    height: 2px;
-                    bottom: -5px;
-                    left: 0;
-                    background-color: #b507d0ae;
-                    visibility: hidden;
-                    transition: all 0.3s ease-in-out;
-                }
-
-                &:hover::before {
-                    visibility: visible;
-                    width: 100%;
-                }
-            }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 0;
+          height: 2px;
+          bottom: -5px;
+          left: 0;
+          background-color: $purple;
+          visibility: hidden;
+          transition: all 0.3s ease-in-out;
         }
+
+        &:hover::before {
+          visibility: visible;
+          width: 100%;
+        }
+      }
     }
+  }
+
+  @include respond-to(medium) {
+    ul {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      background-color: $black;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      z-index: 1000;
+
+      &.active {
+        display: flex;
+      }
+
+      li {
+        padding: 10px;
+        text-align: left;
+      }
+    }
+  }
 }
 
 .btn-download {
-    background-color: #d6a8ddfa;
-    color: rgb(5, 18, 47);
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-    margin-left: auto;
-    margin-right: 20px;
+  background-color: $button-bg;
+  color: $text-color;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: 20px;
 
-    &:hover {
-        background-color: #fffbf4; // Changed hover color for contrast
-    }
-}
-
-main {
-    h1.special-font {
-        font-family: "Roboto Slab", serif;
-        margin-top: 100px;
-        text-align: center;
-        margin-bottom: 50px;
-    }
-}
-
-p {
-    font-size: 20px;
-    margin-top: 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
-    .item {
-        display: flex;
-        gap: 20px;
-
-        .hotel-content {
-            flex: 1;
-        }
-
-        .hotel-image {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-
-            img {
-                max-width: 100%;
-                border-radius: 10px;
-            }
-        }
-    }
+  &:hover {
+    background-color: $button-hover-bg;
+  }
 }
 
 footer {
     text-align: center;
-    margin-top: 20px;
-}
+    margin-top: 40px;
+    }
 
-// Hamburger menu styles
+
 .hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
 
-    .bar {
-        height: 3px;
-        width: 25px;
-        background-color: white;
-        margin: 3px 0;
-        transition: 0.3s;
-    }
-}
+  .bar {
+    height: 3px;
+    width: 25px;
+    background-color: $white;
+    margin: 3px 0;
+    transition: 0.3s;
+  }
 
-// Media Queries
-@media screen and (max-width: 1200px) {
-    body {
-        padding: 15px;
-    }
-
-    .container .item .hotel-image img {
-        border-radius: 8px;
-    }
-
-    .container {
-        gap: 15px;
-        padding: 15px;
-    }
-}
-
-@media screen and (max-width: 992px) {
-    body {
-        padding: 10px;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .container {
-        gap: 10px;
-        padding: 10px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        padding: 5px;
-    }
-
-    p {
-        font-size: 16px;
-    }
-
-    .container {
-        gap: 5px;
-        padding: 5px;
-    }
-
-    .container .item {
-        flex-direction: column;
-
-        .hotel-image {
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px; // Aggiunge uno spazio tra il testo e l'immagine
-        }
-    }
-
-    nav {
-        ul {
-            display: none; // Nasconde il menù
-            flex-direction: column; // Disposizione a colonna
-            width: 100%;
-            background-color: #333;
-            position: absolute;
-            top: 60px; // Posizione sotto l'header
-            left: 0;
-            z-index: 1000;
-
-            &.active {
-                display: flex; // Mostra il menù quando attivo
-            }
-
-            li {
-                padding: 10px; // Padding per migliorare il clic
-                text-align: left; // Allineamento a sinistra
-            }
-        }
-    }
-
-    .hamburger {
-        display: flex;
-        margin-left: 20px; // Distanza dal bordo sinistro
-    }
-}
-
-@media screen and (max-width: 576px) {
-    p {
-        font-size: 14px;
-    }
+  @include respond-to(medium) {
+    display: flex;
+    margin-left: 20px;
+  }
 }

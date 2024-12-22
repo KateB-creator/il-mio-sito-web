@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cherry+Cream+Soda&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,15 +6,66 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3); /* Spiaggia */
-  background-blend-mode: overlay; /* Miscelare i gradienti */
+  font-family: "Josefin Sans", serif;
+  background: linear-gradient(to bottom, #87CEEB, #00BFFF 25%, #1E90FF 50%, #00BFFF 75%, #87CEEB), linear-gradient(to bottom, #F5DEB3, #FFE4B5 25%, #FFE4C4 50%, #FFDAB9 75%, #F5DEB3);
+  background-blend-mode: overlay;
   padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  body {
+    padding: 15px;
+  }
+}
+@media screen and (max-width: 992px) {
+  body {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+    padding: 5px;
+  }
+}
+body .progetto_uno {
+  margin-top: 80px;
+}
+body .progetto_uno h2 {
+  font-family: "Josefin Sans", serif;
+  text-align: center;
+  margin-bottom: 20px;
+}
+body .progetto_uno p {
+  font-size: 24px;
+}
+body .progetto_uno .img-hotelPomelia img {
+  max-width: 400px;
+}
+body .progetto_due {
+  margin-top: 40px;
+}
+body .progetto_due h2 {
+  margin-bottom: 20px;
+}
+body .progetto_due p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+body .progetto_due a {
+  padding: 15px 30px 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 36px;
+  background: linear-gradient(310deg, #9B3CB7 0%, #F24474 92.11%);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+body .progetto_due img {
+  max-width: 500px;
 }
 
 header {
   background-color: #333;
-  color: white;
+  color: #fff;
   padding: 1em;
   position: fixed;
   top: 0;
@@ -24,20 +76,23 @@ header {
 
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
 }
 nav ul {
   list-style: none;
   display: flex;
   margin-right: auto;
+  margin-bottom: 0;
+  padding-left: 0;
   animation: slideIn 1s ease-out;
 }
 nav ul li {
   margin: 0 15px;
 }
 nav ul li a {
-  color: white;
+  color: #fff;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -57,122 +112,7 @@ nav ul li a:hover::before {
   visibility: visible;
   width: 100%;
 }
-
-.btn-download {
-  background-color: rgba(214, 168, 221, 0.9803921569);
-  color: rgb(5, 18, 47);
-  padding: 10px 20px;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  margin-left: auto;
-  margin-right: 20px;
-}
-.btn-download:hover {
-  background-color: #fffbf4;
-}
-
-main h1.special-font {
-  font-family: "Roboto Slab", serif;
-  margin-top: 100px;
-  text-align: center;
-  margin-bottom: 50px;
-}
-
-p {
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.container .item {
-  display: flex;
-  gap: 20px;
-}
-.container .item .hotel-content {
-  flex: 1;
-}
-.container .item .hotel-image {
-  flex: 1;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.container .item .hotel-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
-footer {
-  text-align: center;
-  margin-top: 20px;
-}
-
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.hamburger .bar {
-  height: 3px;
-  width: 25px;
-  background-color: white;
-  margin: 3px 0;
-  transition: 0.3s;
-}
-
-@media screen and (max-width: 1200px) {
-  body {
-    padding: 15px;
-  }
-  .container .item .hotel-image img {
-    border-radius: 8px;
-  }
-  .container {
-    gap: 15px;
-    padding: 15px;
-  }
-}
-@media screen and (max-width: 992px) {
-  body {
-    padding: 10px;
-  }
-  p {
-    font-size: 18px;
-  }
-  .container {
-    gap: 10px;
-    padding: 10px;
-  }
-}
 @media screen and (max-width: 768px) {
-  body {
-    padding: 5px;
-  }
-  p {
-    font-size: 16px;
-  }
-  .container {
-    gap: 5px;
-    padding: 5px;
-  }
-  .container .item {
-    flex-direction: column;
-  }
-  .container .item .hotel-image {
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-  }
   nav ul {
     display: none;
     flex-direction: column;
@@ -190,13 +130,43 @@ footer {
     padding: 10px;
     text-align: left;
   }
+}
+
+.btn-download {
+  background-color: rgba(214, 168, 221, 0.9803921569);
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-left: auto;
+  margin-right: 20px;
+}
+.btn-download:hover {
+  background-color: #fffbf4;
+}
+
+footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger .bar {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
   .hamburger {
     display: flex;
     margin-left: 20px;
-  }
-}
-@media screen and (max-width: 576px) {
-  p {
-    font-size: 14px;
   }
 }
