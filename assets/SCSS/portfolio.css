@@ -60,8 +60,34 @@ body .progetto_due a {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
 body .progetto_due img {
-  max-width: 500px;
+  max-width: 400px;
   margin-top: 40px;
+}
+body .progetto_tre {
+  margin-top: 40px;
+}
+body .progetto_tre h2 {
+  margin-bottom: 20px;
+}
+body .progetto_tre p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+body .progetto_tre a {
+  padding: 15px 30px 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 36px;
+  background: linear-gradient(310deg, #9B3CB7 0%, #F24474 92.11%);
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
+}
+body .progetto_tre img {
+  max-width: 400px;
+  margin-top: 40px;
+}
+body .progetto_tre img .bookfinder {
+  padding: 20px;
 }
 body footer {
   text-align: center;
