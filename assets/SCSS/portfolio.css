@@ -83,10 +83,12 @@ body .progetto_tre a {
   background: linear-gradient(310deg, #9B3CB7 0%, #F24474 92.11%);
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.2);
 }
-body .progetto_tre img .bookfinder {
-  padding: 20px;
+body .progetto_tre img {
   max-width: 500px;
   margin-top: 40px;
+}
+body .progetto_tre img .bookfinder {
+  padding: 20px;
 }
 body footer {
   text-align: center;
