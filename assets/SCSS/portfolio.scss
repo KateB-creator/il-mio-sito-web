@@ -93,8 +93,9 @@ body {
 
 
     img {
-      max-width: 400px;
+      max-width: 500px;
       margin-top: 40px;
+      padding: 20px;
     
     }
   }
@@ -123,12 +124,10 @@ body {
 
 
     img {
-      max-width: 400px;
-      margin-top: 40px;
-    
       .bookfinder{
         padding: 20px;
-
+        max-width: 500px;
+        margin-top: 40px;
       }
     }
   }
