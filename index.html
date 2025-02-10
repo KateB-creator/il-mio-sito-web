@@ -1,151 +1,839 @@
 <!DOCTYPE html>
-<html lang="it">
+<!--[if IE 8 ]><html class="no-js oldie ie8" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <meta name="description" content="Benvenuti nel sito web di Balia Katiuscia. Scopri i miei progetti di programmazione e design.">
-    <meta property="og:title" content="Il mio sito web">
+
+   <!--- basic page needs
+   ================================================== -->
+   <meta charset="utf-8">
+	<title>Katiuscia Balia</title>
+    <meta name="description" content="Benvenuti nel sito web di Balia Katiuscia. Scopri i miei progetti di programmazione.">
+	<meta name="author" content="Katiuscia Balia">
+	<meta property="og:title" content="Il mio sito web">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kateb-creator.github.io/il-mio-sito-web/">
     <meta property="og:image" content="https://raw.githubusercontent.com/KateB-creator/il-mio-sito-web/main/assets/img/anteprima_portfolio.png">
-    <meta property="og:description" content="Scopri i miei lavori di programmazione e design.">
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/CSS/styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>Balia Katiuscia</title>
+    <meta property="og:description" content="Scopri i miei progetti di programmazione.">
+
+   <!-- mobile specific metas
+   ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+ 	<!-- CSS
+   ================================================== -->
+   <link rel="stylesheet" href="css/base.css">  
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/vendor.css">     
+
+   <!-- script
+   ================================================== -->   
+	<script src="js/modernizr.js"></script>
+	<script src="js/pace.min.js"></script>
+
+   <!-- favicons
+	================================================== -->
+	<link rel="icon" type="image/png" href="favicon.png">
+
 </head>
-<body>
-    <header>
-        <nav>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-            <ul id="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Progetti di sviluppo</a></li>
-                <li><a href="contact.html">Contatti</a></li>
-            </ul>
-            <a href="assets/files/BaliaKatiuscia-juniorfullstackdeveloper.pdf" class="btn-download" download> Scarica CV</a>
-        </nav>
-    </header>
 
-    <div class="main-content">
-        <h1>Katiuscia Balia</h1>
-        <h1 id="changing-text">I'm <span class="changing-words">a full stack developer student</span></h1>
-    </div>
+<body id="top">
 
-    <main>
-        <section class="hero">
-        <div class="hero-container">
-            <div class="hero-image">
-                <img src="assets/img/foto-profilo.svg" alt="La mia foto" class="left-image" loading="lazy" width="300" height="300">
-            </div>
-            <div class="hero-description">
-                <h2>About me!</h2>
-                <p>Ho iniziato la mia carriera come progettista CADCAM dentale, attratta dalla possibilità di usare la tecnologia per migliorare la vita delle persone.</p>
-                <p>In questo ruolo, ho acquisito solide competenze in progettazione 3D e produzione. Col tempo, il mio interesse si è spostato verso lo sviluppo web e delle app, riconoscendo il loro potenziale impatto positivo sulla società.</p>
-                <p>Per questo, mi sono iscritta al master in full stack developer di Star2Impact. Sono entusiasta di iniziare la mia nuova carriera come sviluppatrice web e app, e grata per l'opportunità di creare prodotti digitali significativi. Continuo a imparare ogni giorno e sono curiosa di scoprire cosa mi riserva il futuro.</p>
-            </div>
-        </div>
-    </section>
-    
-        <div class="images">
-            <h2>Formazione e Competenze</h2>
-            <img src="assets/img/education.png" alt="education" class="extra-image" loading="lazy" width="400" height="300">
-            <img src="assets/img/abilità-personali.png" alt="abilita" class="extra-image" loading="lazy" width="400" height="300">
-        </div>
+	<!-- header 
+   ================================================== -->
+   <header>   	
+   	<div class="row">
 
-        <section class="experience">
-            <h2>La mia Esperienza Lavorativa</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <h3>Progettista CADCAM Dentale</h3>
-                    <p>Ho lavorato come progettista CADCAM dentale, dove ho acquisito competenze significative nella progettazione 3D e nella produzione.</p>
-                    <p><strong>Periodo:</strong> Giugno 2017 - Marzo 2024</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Sviluppatrice Junior FullStack</h3>
-                    <p>Attualmente sto frequentando un master in fullStack development presso la Start2Impact, dove sto acquisendo competenze in varie tecnologie per lo sviluppo web e mobile. </p>
-                    <p><strong>Periodo:</strong> Giugno 2024 - Presente</p>
-                </div>
-                <div class="experience-item">
-                    <h3>Sviluppatrice Front-End</h3>
-                    <p>Nel corso del mio tirocinio presso la BizConsulting, mi sto focalizzando sullo sviluppo front-end, con particolare attenzione alla realizzazione di landing page responsive. Utilizzo un mix di HTML, CSS e JavaScript per creare interfacce utente intuitive e performanti. Inoltre, mi avvalgo del framework Bootstrap per accelerare lo sviluppo e garantire una visualizzazione ottimale su diverse dimensioni di schermo. </p>
-                    <p><strong>Periodo:</strong> Ottobre 2024 - Presente</p>
-                </div>
-            </div>
-        </section>
-       
-        <section class="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <div class="skill-item"><img src="assets/img/sass.png" alt="Sass" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/git.png" alt="Git" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/bootstrap.png" alt="Bootstrap" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/html.png" alt="Html" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/CSS.png" alt="Css" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/github.png" alt="Github" loading="lazy" width="100" height="100"></div>
-                <div class="skill-item"><img src="assets/img/javascript.svg" alt="Javascript" loading="lazy" width="100" height="100"></div>
-            </div>
-        </section>
-    </main>
+   		<div class="top-bar">
+   			<a class="menu-toggle" href="#"><span>Menu</span></a>
 
-    <footer>
-        <p>&copy; 2024 sito web di Balia Katiuscia. Tutti i diritti riservati.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script> 
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
+		   	<nav id="main-nav-wrap">
+					<ul class="main-navigation">
+						<li class="current"><a class="smoothscroll"  href="#intro" title="">Home</a></li>
+						<li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+						<li><a class="smoothscroll"  href="#resume" title="resume">Resume</a></li>
+						<li><a class="smoothscroll"  href="#portfolio" title="">Portfolio</a></li>
+						<li><a class="smoothscroll"  href="#services" title="service">Services</a></li>					
+						<li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>				
+					</ul>
+				</nav>    		
+   		</div> <!-- /top-bar --> 
+   		
+   	</div> <!-- /row --> 		
+   </header> <!-- /header -->
 
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
+	<!-- intro section
+   ================================================== -->
+   <section id="intro">   
 
-        // JavaScript per cambiare le parole
-        const words = ["a CadCam designer", "a Graphic Designer", "a full stack developer student"];
-        let index = 0;
+   	<div class="intro-overlay"></div>	
 
-        function changeWord() {
-            const wordElement = document.querySelector(".changing-words");
-            wordElement.textContent = words[index];
-            index = (index + 1) % words.length;
-        }
+   	<div class="intro-content">
+   		<div class="row">
 
-        setInterval(changeWord, 2000);
-    </script> 
+   			<div class="col-twelve">
 
+	   			<h5>Hello, World.</h5>
+	   			<h1>I'm Katiuscia Balia.</h1>
+
+	   			<p class="intro-position">
+	   				<span>Jr Full-Stack developer specialized in Front-End</span>
+	   			</p>
+	   			<a class="button stroke smoothscroll" href="#about" title="">More About Me</a>
+	   		</div>  
+   		</div>   		 		
+   	</div> <!-- /intro-content --> 
+
+   	<ul class="intro-social">        
+         <li><a href="https://www.linkedin.com/in/katiuscia-balia-078b82244/"><i class="fa fa-linkedin"></i></a></li>
+		 <li><a href="https://github.com/"><i class="fa fa-github"></i></a></li>
+		 <li><a href="https://codepen.io/Katiuscia-Balia"><i class="fa fa-codepen"></i></a></li>
+         <li><a href="https://talent.start2impact.it/profile/katiuscia-balia-71206396-6900-44db-82b9-f0e10f1a3e9a"><i class="fa fa-rocket"></i></a></li>
+      </ul> <!-- /intro-social -->      	
+
+   </section> <!-- /intro -->
+
+
+   <!-- about section
+   ================================================== -->
+   <section id="about">  
+
+   	<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>About me</h5>
+   			<h1>Lasciate che mi presenti.</h1>
+
+   			<div class="intro-info">
+
+   				<img src="images/profile-pic.jpg" alt="Profile Picture">
+
+   				<p class="lead">Ho iniziato la mia carriera come progettista CADCAM dentale, attratta dalla possibilità di usare la tecnologia per migliorare la vita delle persone.
+				   In questo ruolo, ho acquisito solide competenze in progettazione 3D e produzione. Col tempo, il mio interesse si è spostato verso lo sviluppo web e app, riconoscendo il loro potenziale impatto positivo sulla società.
+				   Per questo, mi sono iscritta al master in full stack developer di Star2Impact. Sono entusiasta di iniziare la mia nuova carriera come sviluppatrice web e app, e grata per l'opportunità di creare prodotti digitali significativi. Continuo a imparare ogni giorno e sono curiosa di scoprire cosa mi riserva il futuro.
+			   
+			</div>   			
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row about-content">
+
+   		<div class="col-six tab-full">
+
+   			<h3>Profile</h3>
+   		
+
+   			<ul class="info-list">
+   				<li>
+   					<strong>Fullname:</strong>
+   					<span>Balia Katiuscia</span>
+   				</li>
+   				<li>
+   					<strong>Birth Date:</strong>
+   					<span>Marzo 21, 1993</span>
+   				</li>
+   				<li>
+   					<strong>Job:</strong>
+   					<span>Jr Full-Stack developer specialized in Front-End</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>katiusciabalia@gmail.com</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h3>Skills</h3>
+   			<p>Sviluppatrice junior full stack con un occhio di riguardo per il Frontend. Il mio obiettivo è creare prodotti digitali che siano belli da vedere e facili da usare. Sono sempre alla ricerca di nuove ispirazioni e soluzioni creative per migliorare l'esperienza utente.</p>
+
+				<ul class="skill-bars">
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<strong>HTML5</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<strong>CSS/SCSS</strong>
+				   </li>
+				   <li>
+					<div class="progress percent90"><span>90%</span></div>
+					<strong>Bootstrap</strong>
+					</li>
+				   <li>
+				   	<div class="progress percent85"><span>85%</span></div>
+				   	<strong>Javascript</strong>
+				   </li>
+				   <li>
+					<div class="progress percent65"><span>65%</span></div>
+					<strong>React</strong>
+					</li>
+				   <li>
+				   	<div class="progress percent40"><span>40%</span></div>
+				   	<strong>PHP&SQL</strong>
+				   </li>
+				   
+      
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="#contact" title="Hire Me" class="button stroke smoothscroll">Hire Me</a>
+   			<a href="file/Curriculum_vitae_balia_katiuscia.pdf" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
+
+
+   <!-- resume Section
+   ================================================== -->
+	<section id="resume" class="grey-section">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Resume</h5>
+   			<h1>Altre mie credenziali.</h1>
+
+   			<p class="lead">Il mio percorso è in continua evoluzione, ma questa sezione offre un'istantanea delle mie esperienze passate e presenti, fornendo un contesto per le sfide e le opportunità che mi aspettano nel futuro dello sviluppo web.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Work Experience</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Front-end Developer</h3>
+	   					<p>Ottobre 2024 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Bizconsulting</h4>
+	   					<p>Attualmente sto svolgendo un tirocinio come sviluppatrice junior Full Stack con focus sul front-end presso Biz Consulting, un'azienda dinamica e all'avanguardia nel settore digitale. Questa esperienza mi sta permettendo di mettere in pratica le mie conoscenze e di acquisire nuove competenze in un ambiente stimolante e collaborativo. Sono entusiasta di poter contribuire a progetti concreti e di crescere professionalmente sotto la guida di esperti del settore.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-briefcase"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Cad-Cam Designer</h3>
+	   					<p>Maggio 2017 - Marzo 2014</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>BoeroClinic</h4>
+	   					<p>Come responsabile del reparto CAD-CAM, ho guidato un team, ottimizzato processi e utilizzato software CAD/CAM e stampanti 3D per progettare e realizzare protesi, impianti e dispositivi medici personalizzati. Ho anche applicato le mie competenze nel graphic design per creare grafiche per prodotti e packaging. La mia passione per la tecnologia mi ha permesso di crescere professionalmente e contribuire a progetti innovativi nel settore dentale e medicale.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+   	
+   	<div class="row resume-timeline">
+
+   		<div class="col-twelve resume-header">
+
+   			<h2>Education</h2>
+
+   		</div> <!-- /resume-header -->
+
+   		<div class="col-twelve">
+
+   			<div class="timeline-wrap">
+
+   				<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Master Full stack developer</h3>
+	   					<p>Giugno 2024 - Present</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Start2impact</h4>
+	   					<p>Da sempre appassionata di tecnologia, ho deciso di trasformare questa passione in una carriera concreta. Attualmente, sono impegnata in un Master Full Stack presso Start2Impact, un percorso formativo che mi sta aprendo le porte del mondo dello sviluppo web e mobile. Studio con entusiasmo HTML, CSS, JavaScript (sia base che avanzato), TypeScript, React, PHP & MySQL, Node.js e WordPress. Ogni nuova tecnologia è una scoperta, un tassello in più verso il mio obiettivo: contribuire a cambiare il mondo attraverso progetti innovativi.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Graphic designer</h3>
+	   					<p>gennaio 2024 - Aprile 2024</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Accademia Domani</h4>
+	   					<p>Il corso di graphic design presso Accademia Domani è stato un'occasione unica per coniugare creatività e tecnica. Ho imparato a utilizzare gli strumenti del graphic designer per dare forma alle idee, creando immagini, loghi, brochure e altri materiali di comunicazione. Sono entusiasta di poter applicare queste nuove competenze nel mio lavoro di sviluppatrice front-end, per realizzare progetti web sempre più curati ed efficaci.</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+	   			<div class="timeline-block">
+
+	   				<div class="timeline-ico">
+	   					<i class="fa fa-graduation-cap"></i>
+	   				</div>
+
+	   				<div class="timeline-header">
+	   					<h3>Diploma Scientifico</h3>
+	   					<p>Giugno 2014</p>
+	   				</div>
+
+	   				<div class="timeline-content">
+	   					<h4>Liceo E.Lussu</h4>
+	   					<p>La mia curiosità, alimentata anche dagli studi scientifici, è stata la scintilla che ha acceso la mia passione per la tecnologia e mi ha spinto a esplorare il mondo digitale</p>
+	   				</div>
+
+	   			</div> <!-- /timeline-block -->
+
+   			</div> <!-- /timeline-wrap -->   			
+
+   		</div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /resume-timeline -->
+		
+	</section> <!-- /features -->
+
+
+	<!-- Portfolio Section
+   ================================================== -->
+	<section id="portfolio">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Portfolio</h5>
+   			<h1>Dai un'occhiata ad alcuni dei miei lavori.</h1>
+
+   			<p class="lead">Qui troverete una raccolta dei progetti a cui ho dedicato passione e impegno, un viaggio in continua evoluzione che testimonia la mia crescita come sviluppatrice front-end. Ogni progetto è una sfida, un'opportunità per imparare e sperimentare nuove tecnologie e soluzioni creative. Esplorate il mio portfolio e scoprite come trasformo le idee in esperienze digitali.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro--> 
+
+   	<div class="row portfolio-content">
+
+   		<div class="col-twelve">
+
+   			<!-- portfolio-wrapper -->
+	         <div id="folio-wrapper" class="block-1-2 block-mob-full stack">
+
+	         	<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/bookfinder-desktop.png" alt="Liberty">
+	                  <a href="#modal-01" class="overlay">	                  	           
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+		     					       <h3 class="folio-title">BookFinder</h3>	     					    
+		     					    	 <span class="folio-types">
+		     					       	  Trova i tuoi libri preferiti
+		     					       </span>
+		     					   </div>	                      	
+	                     </div>                    
+	                  </a>
+	               </div>	               
+	        		</div> <!-- /folio-item -->
+
+	        		<div class="bgrid folio-item">
+	               <div class="item-wrap">
+	               	<img src="images/portfolio/battaglie-desktop.webp" alt="Shutterbug">
+	               	<a href="#modal-02" class="overlay">              		                  
+	                     <div class="folio-item-table">
+	                     	<div class="folio-item-cell">
+	                     		<h3 class="folio-title">Battaglie Stellari</h3>	     					    
+		     					    	<span class="folio-types">
+		     					       	  Game Vintage
+		     					      </span>		     		
+		     					   </div> 	                      	
+	                     </div>                    
+	                  </a>
+	               </div>
+	        		</div> <!-- /folio-item -->
+
+					<div class="bgrid folio-item">
+						<div class="item-wrap">
+							<img src="images/portfolio/voci-desktop.webp" alt="femminismo">
+							<a href="#modal-03" class="overlay">              		                  
+							  <div class="folio-item-table">
+								<div class="folio-item-cell">
+									<h3 class="folio-title">Voci</h3>	     					    
+											<span class="folio-types">
+												DARE VOCE ALLE DONNE NEI MEDIA
+										</span>		     		
+								</div> 	                      	
+							</div>                    
+						   </a>
+						</div>
+					</div> <!-- /folio-item -->
+
+
+	            <!-- modal popups - begin
+	            ============================================================= -->
+	            <div id="modal-01" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/bookfinder.webp" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>BookFinder</h4>
+						  <a href="file/progetto-bookfinder_compressed.pdf" download class="download-btn">Scarica il PDF</a>		      
+		      
+					      <p>BookFinder è un'applicazione web progettata per incentivare la lettura di libri attraverso un'interfaccia semplice e intuitiva. Utilizzando l'API di Open Library, l'app consente agli utenti di cercare libri per categoria, visualizzare informazioni dettagliate come titolo, autore e descrizione, rendendo la ricerca di nuovi titoli un'esperienza immediata e coinvolgente.</p>
+
+					      <div class="categories">Web Development</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://bookfinder-ricercalibri.netlify.app/">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-01 -->
+
+				   <div id="modal-02" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/battagliestellari.webp" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Battaglie Stellari</h4>
+						  <a href="file/progetto_battaglie_stellari_compressed.pdf" download class="download-btn">Scarica il PDF</a>		      
+		      
+					      <p>Il progetto Battaglie Stellari è nato dalla volontà di sfidarmi nello sviluppo di mini giochi vintage, sfruttando appieno le possibilità offerte dalla manipolazione del DOM con JavaScript. L'obiettivo era creare un'esperienza coinvolgente che superasse la soddisfazione dei requisiti tecnici, combinando la passione per lo sviluppo con un'idea creativa che si discostasse dal classico concetto di un semplice contatore.</p>
+
+					      <div class="categories">Javascript</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://battagliestellari.netlify.app/">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-02 -->
+
+				   <div id="modal-03" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/voci.webp" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Progetto VOCI</h4>
+						  <a href="file/progetto-voci_compressed.pdf" download class="download-btn">Scarica il PDF</a>		      
+					      <p>Per questo progetto ho sviluppato Voci, una piattaforma che promuove la parità di genere nei media, con l’obiettivo di dare maggiore visibilità alle donne professioniste del settore. Ancora oggi, le donne nei media affrontano ostacoli significativi, dalla scarsa rappresentanza ai pregiudizi di genere. Voci nasce per creare una rete di supporto che connetta giornaliste, scrittrici e professioniste dell'informazione con opportunità di crescita, formazione e pubblicazione, contribuendo a un panorama mediatico più inclusivo ed equo.
+							Credo fortemente che la parità di genere non sia solo un obiettivo, ma una necessità per costruire un futuro più giusto. Questo progetto è il mio piccolo contributo per dare voce a chi troppo spesso viene ignorato.</p>
+					      <div class="categories">Typescript</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="https://codepen.io/Katiuscia-Balia">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-03 -->
+
+				   <div id="modal-04" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-beetle.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Beetle</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Branding</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-04 -->
+
+				   <div id="modal-05" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-lighthouse.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Lighthouse</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Web Development</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-05 -->
+
+				   <div id="modal-06" class="popup-modal slider mfp-hide">	
+
+				     	<div class="media">
+				     		<img src="images/portfolio/modals/m-salad.jpg" alt="" />
+				     	</div>      	
+
+					   <div class="description-box">
+					      <h4>Salad</h4>		      
+					      <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+
+					      <div class="categories">Branding</div>			               
+					   </div>
+
+			         <div class="link-box">
+			            <a href="http://www.behance.net">Details</a>
+					      <a href="#" class="popup-modal-dismiss">Close</a>
+			         </div>		      
+
+				   </div> <!-- /modal-06 -->
+
+
+				   <!-- modal popups - end
+	            ============================================================= -->
+
+	         </div> <!-- /portfolio-wrapper --> 
+
+   		</div>  <!-- /twelve -->   
+
+   	</div> <!-- /portfolio-content --> 
+		
+	</section> <!-- /portfolio --> 
+
+	
+	<!-- services Section
+   ================================================== -->
+	<section id="services">
+
+		<div class="overlay"></div>
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Services</h5>
+   			<h1>Di cosa hai bisogno?</h1>
+
+   			<p class="lead">Collaboro con i colleghi e i designer per comprendere le esigenze e obiettivi dei clienti, sviluppando soluzioni web su misura che rispecchiano l'identità del loro brand e raggiungono il loro pubblico target per garantire siti web moderni, funzionali e scalabili. La mia expertise in Html e Css, Bootstrap, JavaScript e React mi permette di creare applicazioni web complesse e performanti, con un'attenzione particolare alla qualità del codice e all'usabilità.</p>
+
+   		</div>   		
+   	</div> <!-- /section-intro -->
+
+   	<div class="row services-content">
+
+   		<div id="owl-slider" class="owl-carousel services-list">
+
+	      	<div class="service">	
+
+	      		<span class="icon"><i class="icon-earth"></i></span>            
+
+	            <div class="service-content">	
+
+	            	 <h3>Webdesign</h3>
+
+		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	         		</p>-->
+	         		
+	         	</div> 	         	 
+
+				</div> <!-- /service -->
+
+				<div class="service">	
+
+					<span class="icon"><i class="icon-window"></i></span>                          
+
+	            <div class="service-content">	
+
+	            	<h3>Web Development</h3>  
+
+		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	         		</p>-->
+
+	            </div>	                          
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-paint-brush"></i></span>		            
+
+	            <div class="service-content">
+
+	            	<h3>Branding</h3>
+
+		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	        			</p> -->
+
+	            </div> 	            	               
+
+			   </div> <!-- /service -->
+
+				<div class="service">
+
+					<span class="icon"><i class="icon-toggles"></i></span>	              
+
+	            <div class="service-content">
+
+	            	<h3>UI Design to React</h3>
+
+		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	         		</p> -->
+	         		
+	            </div>                
+
+				</div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-image"></i></span>	            
+
+	            <div class="service-content">
+
+	            	<h3>Graphics Design</h3>
+
+		            <!--<p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	        			</p> -->
+
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+			   <div class="service">
+
+			   	<span class="icon"><i class="icon-chat"></i></span>	   	           
+
+	            <div class="service-content">
+
+	            	 <h3>Consultancy</h3>
+
+		           <!-- <p class="desc">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+	        			</p> -->
+	        			
+	            </div>	               
+
+			   </div> <!-- /service -->
+
+	      </div> <!-- /services-list -->
+   		
+   	</div> <!-- /services-content -->
+		
+	</section> <!-- /services -->	
+
+	
+   <!-- contact
+   ================================================== -->
+	<section id="contact">
+
+		<div class="row section-intro">
+   		<div class="col-twelve">
+
+   			<h5>Contact</h5>
+   			<h1>I'd Love To Hear From You.</h1>
+
+   			<p class="lead">Lorem ipsum Do commodo in proident enim in dolor cupidatat adipisicing dolore officia nisi aliqua incididunt Ut veniam lorem ipsum Consectetur ut in in eu do.</p>
+
+   		</div> 
+   	</div> <!-- /section-intro -->
+
+   	<div class="row contact-form">
+
+   		<div class="col-twelve">
+
+            <!-- form -->
+            <form name="contactForm" id="contactForm" method="post" action="">
+      			<fieldset>
+
+                  <div class="form-field">
+ 						   <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="">
+                  </div>
+                  <div class="form-field">
+	      			   <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="">
+	               </div>
+                  <div class="form-field">
+	     				   <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="">
+	               </div>                       
+                  <div class="form-field">
+	                 	<textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required=""></textarea>
+	               </div>                      
+                 <div class="form-field">
+                     <button class="submitform">Submit</button>
+                     <div id="submit-loader">
+                        <div class="text-loader">Sending...</div>                             
+       				      <div class="s-loader">
+								  	<div class="bounce1"></div>
+								  	<div class="bounce2"></div>
+								  	<div class="bounce3"></div>
+								</div>
+							</div>
+                  </div>
+
+      			</fieldset>
+      		</form> <!-- Form End -->
+
+            <!-- contact-warning -->
+            <div id="message-warning">            	
+            </div>            
+            <!-- contact-success -->
+      		<div id="message-success">
+               <i class="fa fa-check"></i>Your message was sent, thank you!<br>
+      		</div>
+
+         </div> <!-- /col-twelve -->
+   		
+   	</div> <!-- /contact-form -->
+
+   	<div class="row contact-info">
+
+   		<div class="col-four tab-full">
+
+   			<div class="icon">
+   				<i class="icon-pin"></i>
+   			</div>
+
+   			<h5>Where to find me</h5>
+
+   			<p>
+            Sardegna<br>
+           	Cagliari, CA<br>
+            cap: 09128
+            </p>
+
+   		</div>
+   		
+   		
+   	</div> <!-- /contact-info -->
+		
+	</section> <!-- /contact -->
+
+
+   <!-- footer
+   ================================================== -->
+
+   <footer>
+     	<div class="row">
+
+     		<div class="col-six tab-full pull-right social">
+
+     			<ul class="footer-social">        
+					<li><a href="https://www.linkedin.com/in/katiuscia-balia-078b82244/"><i class="fa fa-linkedin"></i></a></li>
+					<li><a href="https://github.com/"><i class="fa fa-github"></i></a></li>
+					<li><a href="https://codepen.io/Katiuscia-Balia"><i class="fa fa-codepen"></i></a></li>
+					<li><a href="https://talent.start2impact.it/profile/katiuscia-balia-71206396-6900-44db-82b9-f0e10f1a3e9a"><i class="fa fa-rocket"></i></a></li>
+			   </ul> 
+	      		
+	      </div>
+
+      	<div class="col-six tab-full">
+	      	<div class="copyright">
+		        	<span>© Sito web Katiuscia Balia 2025</span> 	         	
+		         </div>		                  
+	      	</div>
+
+	      	<div id="go-top">
+		         <a class="smoothscroll" title="Back to Top" href="#top"><i class="fa fa-long-arrow-up"></i></a>
+		      </div>
+
+      	</div> <!-- /row -->     	
+   </footer>  
+
+   <div id="preloader"> 
+    	<div id="loader"></div>
+   </div> 
+
+   <!-- Java Script
+   ================================================== --> 
+   <script src="js/jquery-2.1.3.min.js"></script>
+   <script src="js/plugins.js"></script>
+   <script src="js/main.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
-    // Funzione per controllare se l'elemento è visibile
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
+(function() {
+    emailjs.init("ltJV9RVED6akh19KZ");
+})();
 
-    // Funzione per aggiungere la classe 'animate' quando l'elemento è nella vista
-    function handleScroll() {
-        const items = document.querySelectorAll('.experience-item');
-        items.forEach(item => {
-            if (isInViewport(item)) {
-                item.classList.add('animate');
-            }
-        });
-    }
+window.onload = function() {
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Aggiungi l'evento di scroll
-    window.addEventListener('scroll', handleScroll);
+        let sLoader = document.getElementById('submit-loader');
+        let messageWarning = document.getElementById('message-warning');
+        let messageSuccess = document.getElementById('message-success');
 
-    // Controlla la visibilità all'avvio
-    document.addEventListener('DOMContentLoaded', handleScroll);
+        const templateParams = {
+            contactName: document.getElementById('contactName').value,
+            contactEmail: document.getElementById('contactEmail').value,
+            contactSubject: document.getElementById('contactSubject').value || "Nessun Oggetto",
+            contactMessage: document.getElementById('contactMessage').value
+        };
+
+        sLoader.style.display = 'block';
+
+        emailjs.send('service_xwvkpar', 'template_8mrwhtq', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                sLoader.style.display = 'none';
+                messageWarning.style.display = 'none';
+                messageSuccess.style.display = 'block';
+                document.getElementById('contactForm').reset();
+                document.getElementById('contactForm').style.display = 'none';
+            }, function(error) {
+                console.log('FAILED...', error);
+                sLoader.style.display = 'none';
+                messageWarning.innerHTML = "Errore nell'invio del messaggio. Riprova.";
+                messageWarning.style.display = 'block';
+            });
+    });
+};
 </script>
 
+
 </body>
+
 </html>
