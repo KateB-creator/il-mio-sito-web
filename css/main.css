@@ -1484,11 +1484,11 @@ header .top-bar {
 	margin-left: -30px;
 }
 .intro-info img {
-	height: 11rem;
-    width: 11rem;
+	height: 18rem;
+    width: 14rem;
     border-radius: 50%;
-	margin: .9rem 0 0 0;
-	float: left;
+    margin: -1.1rem 0 0 -28px;
+    float: left;
 }
 .intro-info .lead {
 	text-align: left;
