@@ -1486,7 +1486,6 @@ header .top-bar {
 .intro-info img {
 	height: 18rem;
     width: 14rem;
-    border-radius: 50%;
     margin: -1.1rem 0 0 -28px;
     float: left;
 }
